@@ -52,7 +52,7 @@ npm run deploy
 
 New blog posts can be added directly via the GitHub website.
 
-Step 1: Open [/posts](https://github.com/andreasklinger/klinger-io/tree/canary/posts) directory
+Step 1: Open [/posts](https://github.com/andreasklinger/klinger-io/tree/main/posts) directory
 
 Step 2: Click on "Add file" in upper right corner
 
@@ -76,7 +76,7 @@ Step 5: Add content as markdown to file
 
 Follow these steps to add a new image to a blog post that is not from an external source. In this way, the image is automatically saved in different quality levels during the building process to reduce network traffic.
 
-Step 1: Add your image to [/public/images](https://github.com/andreasklinger/klinger-io/tree/canary/public/images)
+Step 1: Add your image to [/public/images](https://github.com/andreasklinger/klinger-io/tree/main/public/images)
 
 Step 2: Use the image as follows
 
