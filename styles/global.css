@@ -1,0 +1,92 @@
+/* Typography */
+h1 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-extrabold;
+}
+h2 {
+  @apply text-xl md:text-2xl lg:text-3xl;
+}
+h3 {
+  @apply text-lg md:text-xl lg:text-2xl;
+}
+h4 {
+  @apply text-base md:text-lg lg:text-xl;
+}
+:is(h1, h2, h3, h4) {
+  @apply text-coolGray-800 dark:text-coolGray-200 leading-normal md:leading-normal lg:leading-normal;
+}
+:is(h2, h3, h4) {
+  @apply font-bold;
+}
+p {
+  @apply text-lg lg:text-xl text-coolGray-600 dark:text-coolGray-400 leading-relaxed lg:leading-relaxed;
+}
+strong {
+  @apply text-coolGray-700 dark:text-coolGray-300 font-bold;
+}
+
+/* Blockquotes */
+blockquote {
+  @apply pl-6 border-l-2 border-amber-500 lg:text-lg italic;
+}
+
+/* Links */
+a:not(.prevent-default) {
+  @apply text-sky-600 dark:text-sky-400 font-semibold break-all;
+}
+
+/* Media */
+:is(img, video, iframe):not(.prevent-default) {
+  @apply w-full rounded-md;
+}
+
+/* Lists */
+ul:not(.prevent-default) {
+  @apply list-square;
+}
+ol:not(.prevent-default) {
+  @apply list-decimal;
+}
+:is(ul, ol):not(.prevent-default) {
+  @apply ml-5;
+}
+:is(ul, ol):not(.prevent-default) li {
+  @apply pl-1 md:pl-2 lg:text-lg text-coolGray-700 dark:text-coolGray-300 leading-relaxed lg:leading-relaxed;
+}
+
+/* Code */
+pre {
+  @apply w-full bg-blueGray-800 p-4 md:p-6 rounded-md text-sm md:text-base text-coolGray-300 break-all whitespace-normal;
+}
+
+/* Spacing */
+:is(main, article) > * + h2 {
+  @apply mt-12 md:mt-16 lg:mt-20;
+}
+:is(main, article) > * + :is(h3, h4) {
+  @apply mt-10 md:mt-12 lg:mt-14;
+}
+:is(main, article) > :is(h2, h3, h4) + :is(h2, h3, h4) {
+  @apply mt-8 md:mt-10 lg:mt-12;
+}
+:is(main, article) > :is(img, video, iframe):not(.prevent-default) {
+  @apply my-6 md:my-8 lg:my-10;
+}
+:is(main, article)
+  > *
+  + :is(p, blockquote, img, ul, ol, pre):not(.prevent-default) {
+  @apply mt-4 md:mt-6 lg:mt-8;
+}
+:is(main, article)
+  > :is(ul, ol):not(.prevent-default)
+  :is(li + li, li > :is(ul, ol)),
+:is(main, article) > blockquote > * + * {
+  @apply mt-2 md:mt-3 lg:mt-4;
+}
+
+/* Other */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+svg {
+  @apply h-full;
+}

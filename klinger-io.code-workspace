@@ -1,0 +1,12 @@
+{
+  "folders": [{ "path": "." }],
+  "settings": {
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/.next": true,
+      "**/out": true,
+      "**/node_modules": true,
+      "**/.firebase": true
+    }
+  }
+}

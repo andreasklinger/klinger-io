@@ -1,0 +1,36 @@
+{
+  "name": "klinger-io",
+  "version": "1.0.0",
+  "homepage": "https://klinger.io/",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "lint": "next lint",
+    "build": "next build && next export && node ./scripts/resizeImages.js",
+    "serve": "firebase serve",
+    "deploy": "firebase deploy"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "mdx-bundler": "^6.0.2",
+    "next": "latest",
+    "preact": "^10.5.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reading-time": "^1.5.0",
+    "swr": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.31",
+    "autoprefixer": "^10.3.7",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
+    "sharp": "^0.29.2",
+    "tailwindcss": "^2.2.17",
+    "typescript": "^4.4.4"
+  }
+}
