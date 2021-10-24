@@ -6,6 +6,7 @@ interface PostListProps {
   className?: string;
   src: string;
   sizes: string;
+  loading?: 'eager' | 'lazy';
   alt?: string;
 }
 

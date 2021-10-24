@@ -11,6 +11,7 @@ export const PostImage: FC<PostListProps> = ({ src, alt }) =>
     <Image
       src={`/images/${src}`}
       sizes="(max-width: 768px) 95vw, 728px"
+      loading="lazy"
       alt={alt}
     />
   ) : null;
