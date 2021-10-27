@@ -18,7 +18,7 @@ export const PostPreview: FC<PostPreviewProps> = ({
 
   return (
     <Link href={`/posts/${slug}`}>
-      <a className="prevent-default">
+      <a className="prevent-default group">
         <div className="md:flex md:justify-between space-y-3 md:space-y-0 md:space-x-8 lg:space-x-10">
           <Heading className="text-coolGray-800 dark:text-coolGray-200 text-lg md:text-xl lg:text-2xl leading-normal md:leading-normal lg:leading-normal">
             {title}
@@ -29,7 +29,10 @@ export const PostPreview: FC<PostPreviewProps> = ({
             </div>
           )}
         </div>
-        <p className="mt-2 md:mt-4 lg:mt-6">{summary}</p>
+        <p className="mt-2 md:mt-4 lg:mt-6">{summary} </p>
+        <div className="text-base lg:text-lg text-sky-600 dark:text-sky-400 opacity-75 group-hover:opacity-100 transition-opacity mt-2 lg:mt-3">
+          Read more...
+        </div>
       </a>
     </Link>
   );
