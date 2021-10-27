@@ -9,7 +9,7 @@ interface PostListProps {
 
 export const PostList: FC<PostListProps> = ({ className, posts }) => (
   <ul
-    className={`prevent-default space-y-8 md:space-y-10 lg:space-y-12 ${className}`}
+    className={`prevent-default space-y-10 md:space-y-12 lg:space-y-14 ${className}`}
   >
     {posts.map((post) => (
       <li key={post.slug}>
