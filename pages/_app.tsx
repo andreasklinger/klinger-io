@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           />
         </div>
 
-        <header className="w-full fixed top-0 left-0 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-filter backdrop-blur p-4 md:p-5 lg:py-6 lg:px-10">
+        <header className="w-full fixed z-20 top-0 left-0 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-filter backdrop-blur p-4 md:p-5 lg:py-6 lg:px-10">
           <nav className="flex justify-between">
             <Link href="/">
               <a className="prevent-default p-3 -m-3 text-lg lg:text-xl text-coolGray-800 hover:text-coolGray-900 dark:text-coolGray-200 dark:hover:text-coolGray-100 font-semibold transition-colors">
