@@ -29,6 +29,11 @@
     ],
     "redirects": [
       {
+        "source": "/post/668864580923047936",
+        "destination": "/posts/🙏",
+        "type": 301
+      },
+      {
         "source": "/post/654608607896272896/joining-hypergrowth-startups",
         "destination": "/posts/joining-hypergrowth-startups",
         "type": 301
