@@ -2,7 +2,7 @@
 import { FC, useMemo } from 'react';
 import { responsiveImage } from '../config';
 
-interface PostListProps {
+interface ImageProps {
   className?: string;
   src: string;
   sizes: string;
@@ -10,7 +10,7 @@ interface PostListProps {
   alt?: string;
 }
 
-export const Image: FC<PostListProps> = (props) => {
+export const Image: FC<ImageProps> = (props) => {
   const { src } = props;
 
   // Create src set for responsive images in production mode

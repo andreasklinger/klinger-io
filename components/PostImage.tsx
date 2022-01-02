@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { Image } from './Image';
 
-interface PostListProps {
+interface PostImageProps {
   src?: string;
   alt?: string;
 }
 
-export const PostImage: FC<PostListProps> = ({ src, alt }) =>
+export const PostImage: FC<PostImageProps> = ({ src, alt }) =>
   src ? (
     <Image
       src={`/images/${src}`}
