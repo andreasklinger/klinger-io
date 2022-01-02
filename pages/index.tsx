@@ -42,11 +42,9 @@ interface PostsPageProps {
 const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
   <>
     <Head
-      title="Blog of Andreas Klinger"
-      description="I am a product/eng-guy good in two things: Making people believe I am good in anything at all and making stuff worth a tweet. On this website I share notes & thoughts."
+      title="Andreas Klinger"
+      description="I am a product/eng-guy good in two things: Making people believe I am good in anything at all and making stuff worth a tweet. On this website I share notes &amp; thoughts."
     />
-
-    <h1>Blog of Andreas Klinger</h1>
 
     <div className="flex items-center space-x-4 md:space-x-5 lg:space-x-6 mt-12 md:mt-16 lg:mt-20">
       <Image
@@ -55,26 +53,25 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
         alt="Andreas Klinger"
         sizes="(max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
       />
-      <h2>About me</h2>
+      <h2>Hey! ✌️</h2>
     </div>
 
-    {/* TODO: Replace lorem ipsum text */}
     <p className="mt-6 md:mt-8 lg:mt-10">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-      dis parturient montes, nascetur ridiculus mus.
+      My name's Andreas Klinger.
     </p>
     <p>
-      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-      consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
-      vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
-      vitae, justo. Nullam dictum felis eu pede mollis pretium.
+      I was founding team &amp; CTO of <a href="https://www.producthunt.com" target="_blank" rel="noreferrer">Product Hunt</a>, 
+      VPE of <a href="https://www.coinlist.co" target="_blank" rel="noreferrer">CoinList</a>, 
+      Head of Remote at <a href="https://www.angellist.com" target="_blank" rel="noreferrer">AngelList</a>,
+      and currently i work as CTO at <a href="https://www.beondeck.com">On Deck</a>.
     </p>
     <p>
-      Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
-      vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-      vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
-      feugiat a, tellus.
+      I also angel invest via <a href="https://remotefirstcapital.com" target="_blank" rel="noreferrer">Remote First Capital</a>.  
+    </p>
+
+    <p> 
+      I was lucky to learn from <a href="/posts/%F0%9F%99%8F">a lot of people</a> throughout my career.<br/>
+      On this page i try to <a href="/posts/">summarize some learnings</a>.
     </p>
 
     <ul className="prevent-default flex space-x-8 md:space-x-9 lg:space-x-10 mt-6 md:mt-8 lg:mt-10">
@@ -91,16 +88,12 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
           Icon: GitHubIcon,
           href: 'https://github.com/andreasklinger',
         },
-        {
-          Icon: InstagramColorIcon,
-          href: 'https://www.instagram.com/andreasklinger',
-        },
       ].map(({ href, Icon }) => (
         <li key={href}>
           <a
             className="prevent-default h-8 lg:h-9 block text-black dark:text-white"
             href={href}
-            target="_blank"
+            target="_blank" rel="noreferrer"
             rel="noreferrer"
           >
             <Icon />
@@ -108,17 +101,20 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
         </li>
       ))}
     </ul>
+    <p> 
+      <small>PS: If you find typos or got ideas how to improve articles, feel free to <a href="https://github.com/andreasklinger/klinger-io">send me a pull request</a></small>
+    </p>
 
     {latestPosts.length > 0 && (
       <>
-        <h2 className="mt-12 md:mt-16 lg:mt-20">
+        <h3 className="mt-12 md:mt-16 lg:mt-20">
           Latest post{latestPosts.length > 1 ? 's' : ''}
-        </h2>
+        </h3>
         <PostList className="mt-8 md:mt-10 lg:mt-12" posts={latestPosts} />
       </>
     )}
 
-    <h2 className="mt-12 md:mt-16 lg:mt-20">Popular posts</h2>
+    <h3 className="mt-12 md:mt-16 lg:mt-20">Popular posts</h3>
     <PostList className="mt-8 md:mt-10 lg:mt-12" posts={popularPosts} />
 
     <div className="mt-8 md:mt-10 lg:mt-12">
