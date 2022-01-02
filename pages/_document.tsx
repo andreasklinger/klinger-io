@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+import { analyticsTrackingId } from '../config';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -30,6 +31,20 @@ class MyDocument extends Document {
             href="/favicon-32x32.png"
           />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${analyticsTrackingId}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${analyticsTrackingId}');
+              `,
+            }}
+          />
         </Head>
         <body className="bg-white dark:bg-black text-gray-700 dark:text-gray-300">
           <Main />

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
+import { trackAnalyticsPageview } from '../helpers/trackAnalyticsPageview';
 import { ThemeIcon, GitHubIcon } from '../icons';
 import 'tailwindcss/tailwind.css';
 import '../styles/font.css';
@@ -15,6 +16,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   // Create theme and background state
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [background, setBackground] = useState<string>();
+
+  // Track Google Analytics pageviews when route changes
+  useEffect(() => {
+    router.events.on('routeChangeComplete', trackAnalyticsPageview);
+    return () => {
+      router.events.off('routeChangeComplete', trackAnalyticsPageview);
+    };
+  }, [router.events]);
 
   // Set initial theme based on user's prefers color scheme
   useEffect(() => {
