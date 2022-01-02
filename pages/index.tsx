@@ -45,32 +45,53 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
       description="I am a product/eng-guy good in two things: Making people believe I am good in anything at all and making stuff worth a tweet. On this website I share notes &amp; thoughts."
     />
 
-    <div className="flex items-center space-x-4 md:space-x-5 lg:space-x-6 mt-12 md:mt-16 lg:mt-20">
+    <div className="flex items-center space-x-4 md:space-x-5 lg:space-x-6">
       <Image
         className="prevent-default w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 rounded-full"
         src="/images/andreas-klinger.jpg"
         alt="Andreas Klinger"
         sizes="(max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
       />
-      <h2>Hey! ✌️</h2>
+      <h1>Hey! ✌️</h1>
     </div>
 
-    <p className="mt-6 md:mt-8 lg:mt-10">
-      My name&apos;s Andreas Klinger.
+    <p className="mt-6 md:mt-8 lg:mt-10">My name&apos;s Andreas Klinger.</p>
+    <p>
+      I was founding team &amp; CTO of{' '}
+      <a href="https://www.producthunt.com" target="_blank" rel="noreferrer">
+        Product Hunt
+      </a>
+      , VPE of{' '}
+      <a href="https://www.coinlist.co" target="_blank" rel="noreferrer">
+        CoinList
+      </a>
+      , Head of Remote at{' '}
+      <a href="https://www.angellist.com" target="_blank" rel="noreferrer">
+        AngelList
+      </a>
+      , and currently i work as CTO at{' '}
+      <a href="https://www.beondeck.com">On Deck</a>.
     </p>
     <p>
-      I was founding team &amp; CTO of <a href="https://www.producthunt.com" target="_blank" rel="noreferrer">Product Hunt</a>, 
-      VPE of <a href="https://www.coinlist.co" target="_blank" rel="noreferrer">CoinList</a>, 
-      Head of Remote at <a href="https://www.angellist.com" target="_blank" rel="noreferrer">AngelList</a>,
-      and currently i work as CTO at <a href="https://www.beondeck.com">On Deck</a>.
-    </p>
-    <p>
-      I also angel invest via <a href="https://remotefirstcapital.com" target="_blank" rel="noreferrer">Remote First Capital</a>.  
+      I also angel invest via{' '}
+      <a href="https://remotefirstcapital.com" target="_blank" rel="noreferrer">
+        Remote First Capital
+      </a>
+      .
     </p>
 
-    <p> 
-      I was lucky to learn from <Link href="/posts/%F0%9F%99%8F"><a>a lot of people</a></Link> throughout my career.<br/>
-      On this page i try to <Link href="/posts/"><a>summarize some learnings</a></Link>.
+    <p>
+      I was lucky to learn from{' '}
+      <Link href="/posts/🙏">
+        <a>a lot of people</a>
+      </Link>{' '}
+      throughout my career.
+      <br />
+      On this page i try to{' '}
+      <Link href="/posts/">
+        <a>summarize some learnings</a>
+      </Link>
+      .
     </p>
 
     <ul className="prevent-default flex space-x-8 md:space-x-9 lg:space-x-10 mt-6 md:mt-8 lg:mt-10">
@@ -100,20 +121,25 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
         </li>
       ))}
     </ul>
-    <p> 
-      <small>PS: If you find typos or got ideas how to improve articles, feel free to <a href="https://github.com/andreasklinger/klinger-io">send me a pull request</a></small>
+    <p>
+      <small>
+        PS: If you find typos or got ideas how to improve articles, feel free to{' '}
+        <a href="https://github.com/andreasklinger/klinger-io">
+          send me a pull request
+        </a>
+      </small>
     </p>
 
     {latestPosts.length > 0 && (
       <>
-        <h3 className="mt-12 md:mt-16 lg:mt-20">
+        <h2 className="mt-12 md:mt-16 lg:mt-20">
           Latest post{latestPosts.length > 1 ? 's' : ''}
-        </h3>
+        </h2>
         <PostList className="mt-8 md:mt-10 lg:mt-12" posts={latestPosts} />
       </>
     )}
 
-    <h3 className="mt-12 md:mt-16 lg:mt-20">Popular posts</h3>
+    <h2 className="mt-12 md:mt-16 lg:mt-20">Popular posts</h2>
     <PostList className="mt-8 md:mt-10 lg:mt-12" posts={popularPosts} />
 
     <div className="mt-8 md:mt-10 lg:mt-12">
