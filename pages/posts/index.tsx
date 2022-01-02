@@ -35,14 +35,14 @@ const PostsPage: NextPage<PostsPageProps> = ({ posts }) => {
     <>
       <Head
         title="All blog posts | Andreas Klinger"
-        description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis natoque penatibus."
+        description="Learn more about startups, remote work, funding, software and useful tools I use. In the blog posts I share my experience from the past 10+ years."
       />
 
       <h1>All blog posts</h1>
       <p>
-        {/* TODO: Replace lorem ipsum text */}
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa cum sociis natoque penatibus.
+        Learn more about startups, remote work, funding, software and useful
+        tools I use. In the blog posts I share my experience from the past 10+
+        years.
       </p>
 
       <input
