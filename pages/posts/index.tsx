@@ -35,7 +35,6 @@ const PostsPage: NextPage<PostsPageProps> = ({ posts }) => {
     <>
       <Head
         title="All blog posts | Andreas Klinger"
-        // TODO: Replace lorem ipsum text
         description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa cum sociis natoque penatibus."
       />
 
