@@ -6,11 +6,7 @@
     "cleanUrls": true,
     "trailingSlash": false,
     "public": "out",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [
       {
         "source": "**/*.@(html|js|css)",
@@ -33,147 +29,612 @@
     ],
     "redirects": [
       {
+        "source": "/reblog/klinger-io",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/reblog/klinger-io/**",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/page",
+        "destination": "/posts",
+        "type": 301
+      },
+      {
+        "source": "/page/**",
+        "destination": "/posts",
+        "type": 301
+      },
+      {
+        "source": "/archive",
+        "destination": "/posts",
+        "type": 301
+      },
+      {
+        "source": "/archive/**",
+        "destination": "/posts",
+        "type": 301
+      },
+      {
         "source": "/post/668864580923047936",
         "destination": "/posts/🙏",
         "type": 301
       },
       {
-        "source": "/post/654608607896272896/joining-hypergrowth-startups",
+        "source": "/post/668864580923047936/**",
+        "destination": "/posts/🙏",
+        "type": 301
+      },
+      {
+        "source": "/reblog/668864580923047936",
+        "destination": "/posts/🙏",
+        "type": 301
+      },
+      {
+        "source": "/reblog/668864580923047936/**",
+        "destination": "/posts/🙏",
+        "type": 301
+      },
+      {
+        "source": "/post/654608607896272896",
         "destination": "/posts/joining-hypergrowth-startups-😬",
         "type": 301
       },
       {
-        "source": "/post/638203704498159616/adhd",
+        "source": "/post/654608607896272896/**",
+        "destination": "/posts/joining-hypergrowth-startups-😬",
+        "type": 301
+      },
+      {
+        "source": "/reblog/654608607896272896",
+        "destination": "/posts/joining-hypergrowth-startups-😬",
+        "type": 301
+      },
+      {
+        "source": "/reblog/654608607896272896/**",
+        "destination": "/posts/joining-hypergrowth-startups-😬",
+        "type": 301
+      },
+      {
+        "source": "/post/638203704498159616",
         "destination": "/posts/adhd-🧠",
         "type": 301
       },
       {
-        "source": "/post/613532774806192128/code-management",
+        "source": "/post/638203704498159616/**",
+        "destination": "/posts/adhd-🧠",
+        "type": 301
+      },
+      {
+        "source": "/reblog/638203704498159616",
+        "destination": "/posts/adhd-🧠",
+        "type": 301
+      },
+      {
+        "source": "/reblog/638203704498159616/**",
+        "destination": "/posts/adhd-🧠",
+        "type": 301
+      },
+      {
+        "source": "/post/613532774806192128",
         "destination": "/posts/how-i-think-about-code-management",
         "type": 301
       },
       {
-        "source": "/post/613135057119592448/quick-tips-for-hiring-remotely",
+        "source": "/post/613532774806192128/**",
+        "destination": "/posts/how-i-think-about-code-management",
+        "type": 301
+      },
+      {
+        "source": "/reblog/613532774806192128",
+        "destination": "/posts/how-i-think-about-code-management",
+        "type": 301
+      },
+      {
+        "source": "/reblog/613532774806192128/**",
+        "destination": "/posts/how-i-think-about-code-management",
+        "type": 301
+      },
+      {
+        "source": "/post/613135057119592448",
         "destination": "/posts/quick-tips-for-hiring-remotely",
         "type": 301
       },
       {
-        "source": "/post/612591504694919168/close-your-office-now-how-to-operate-your",
+        "source": "/post/613135057119592448/**",
+        "destination": "/posts/quick-tips-for-hiring-remotely",
+        "type": 301
+      },
+      {
+        "source": "/reblog/613135057119592448",
+        "destination": "/posts/quick-tips-for-hiring-remotely",
+        "type": 301
+      },
+      {
+        "source": "/reblog/613135057119592448/**",
+        "destination": "/posts/quick-tips-for-hiring-remotely",
+        "type": 301
+      },
+      {
+        "source": "/post/612591504694919168",
         "destination": "/posts/close-your-office-now-how-to-operate-your-startup-under-lock-down",
         "type": 301
       },
       {
-        "source": "/post/183526480955/fyi-a-better-way-to-give-suggestions-as-a",
+        "source": "/post/612591504694919168/**",
+        "destination": "/posts/close-your-office-now-how-to-operate-your-startup-under-lock-down",
+        "type": 301
+      },
+      {
+        "source": "/reblog/612591504694919168",
+        "destination": "/posts/close-your-office-now-how-to-operate-your-startup-under-lock-down",
+        "type": 301
+      },
+      {
+        "source": "/reblog/612591504694919168/**",
+        "destination": "/posts/close-your-office-now-how-to-operate-your-startup-under-lock-down",
+        "type": 301
+      },
+      {
+        "source": "/post/183526480955",
         "destination": "/posts/fyi-how-founders-can-avoid-drive-by-management",
         "type": 301
       },
       {
-        "source": "/post/183107642120/refactoring-larger-legacy-codebases",
+        "source": "/post/183526480955/**",
+        "destination": "/posts/fyi-how-founders-can-avoid-drive-by-management",
+        "type": 301
+      },
+      {
+        "source": "/reblog/183526480955",
+        "destination": "/posts/fyi-how-founders-can-avoid-drive-by-management",
+        "type": 301
+      },
+      {
+        "source": "/reblog/183526480955/**",
+        "destination": "/posts/fyi-how-founders-can-avoid-drive-by-management",
+        "type": 301
+      },
+      {
+        "source": "/post/183107642120",
         "destination": "/posts/refactoring-larger-legacy-codebases",
         "type": 301
       },
       {
-        "source": "/post/182517381275/a-model-thats-mental",
+        "source": "/post/183107642120/**",
+        "destination": "/posts/refactoring-larger-legacy-codebases",
+        "type": 301
+      },
+      {
+        "source": "/reblog/183107642120",
+        "destination": "/posts/refactoring-larger-legacy-codebases",
+        "type": 301
+      },
+      {
+        "source": "/reblog/183107642120/**",
+        "destination": "/posts/refactoring-larger-legacy-codebases",
+        "type": 301
+      },
+      {
+        "source": "/post/182517381275",
         "destination": "/posts/a-model-thats-mental",
         "type": 301
       },
       {
-        "source": "/post/180989912140/managing-remote-teams-a-crash-course",
+        "source": "/post/182517381275/**",
+        "destination": "/posts/a-model-thats-mental",
+        "type": 301
+      },
+      {
+        "source": "/reblog/182517381275",
+        "destination": "/posts/a-model-thats-mental",
+        "type": 301
+      },
+      {
+        "source": "/reblog/182517381275/**",
+        "destination": "/posts/a-model-thats-mental",
+        "type": 301
+      },
+      {
+        "source": "/post/180989912140",
         "destination": "/posts/managing-remote-teams-a-crash-course",
         "type": 301
       },
       {
-        "source": "/post/77712761215/the-simplest-and-most-important-dashboard-for",
+        "source": "/post/180989912140/**",
+        "destination": "/posts/managing-remote-teams-a-crash-course",
+        "type": 301
+      },
+      {
+        "source": "/reblog/180989912140",
+        "destination": "/posts/managing-remote-teams-a-crash-course",
+        "type": 301
+      },
+      {
+        "source": "/reblog/180989912140/**",
+        "destination": "/posts/managing-remote-teams-a-crash-course",
+        "type": 301
+      },
+      {
+        "source": "/post/77712761215",
         "destination": "/posts/the-simplest-and-most-important-dashboard-for-early-stage-startups",
         "type": 301
       },
       {
-        "source": "/post/77183945226/how-to-correctly-setup-analytics-tools-3-simple-rules",
+        "source": "/post/77712761215/**",
+        "destination": "/posts/the-simplest-and-most-important-dashboard-for-early-stage-startups",
+        "type": 301
+      },
+      {
+        "source": "/reblog/77712761215",
+        "destination": "/posts/the-simplest-and-most-important-dashboard-for-early-stage-startups",
+        "type": 301
+      },
+      {
+        "source": "/reblog/77712761215/**",
+        "destination": "/posts/the-simplest-and-most-important-dashboard-for-early-stage-startups",
+        "type": 301
+      },
+      {
+        "source": "/post/77183945226",
         "destination": "/posts/easy-but-easy-to-fuck-up-3-rules-to-setup-analytics-tools-correctly",
         "type": 301
       },
       {
-        "source": "/post/72440546722/a-primer-on-startup-metrics-which-analytics-tool",
+        "source": "/post/77183945226/**",
+        "destination": "/posts/easy-but-easy-to-fuck-up-3-rules-to-setup-analytics-tools-correctly",
+        "type": 301
+      },
+      {
+        "source": "/reblog/77183945226",
+        "destination": "/posts/easy-but-easy-to-fuck-up-3-rules-to-setup-analytics-tools-correctly",
+        "type": 301
+      },
+      {
+        "source": "/reblog/77183945226/**",
+        "destination": "/posts/easy-but-easy-to-fuck-up-3-rules-to-setup-analytics-tools-correctly",
+        "type": 301
+      },
+      {
+        "source": "/post/72440546722",
         "destination": "/posts/a-primer-on-startup-metrics-which-analytics-tool-to-pick",
         "type": 301
       },
       {
-        "source": "/post/71640845938/dont-drown-in-email-how-to-use-gmail-more",
+        "source": "/post/72440546722/**",
+        "destination": "/posts/a-primer-on-startup-metrics-which-analytics-tool-to-pick",
+        "type": 301
+      },
+      {
+        "source": "/reblog/72440546722",
+        "destination": "/posts/a-primer-on-startup-metrics-which-analytics-tool-to-pick",
+        "type": 301
+      },
+      {
+        "source": "/reblog/72440546722/**",
+        "destination": "/posts/a-primer-on-startup-metrics-which-analytics-tool-to-pick",
+        "type": 301
+      },
+      {
+        "source": "/post/71640845938",
         "destination": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
         "type": 301
       },
       {
-        "source": "/post/69794653694/why-lean-startup-sucks-for-startups",
+        "source": "/post/71640845938/**",
+        "destination": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
+        "type": 301
+      },
+      {
+        "source": "/reblog/71640845938",
+        "destination": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
+        "type": 301
+      },
+      {
+        "source": "/reblog/71640845938/**",
+        "destination": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
+        "type": 301
+      },
+      {
+        "source": "/post/69794653694",
         "destination": "/posts/why-lean-startup-sucks-for-startups",
         "type": 301
       },
       {
-        "source": "/post/69099780086/angellist-is-the-nasdaq-of-our-generation",
+        "source": "/post/69794653694/**",
+        "destination": "/posts/why-lean-startup-sucks-for-startups",
+        "type": 301
+      },
+      {
+        "source": "/reblog/69794653694",
+        "destination": "/posts/why-lean-startup-sucks-for-startups",
+        "type": 301
+      },
+      {
+        "source": "/reblog/69794653694/**",
+        "destination": "/posts/why-lean-startup-sucks-for-startups",
+        "type": 301
+      },
+      {
+        "source": "/post/69099780086",
         "destination": "/posts/angellist-is-the-nasdaq-of-our-generation",
         "type": 301
       },
       {
-        "source": "/post/49773016181/drafting-your-first-investment-round",
+        "source": "/post/69099780086/**",
+        "destination": "/posts/angellist-is-the-nasdaq-of-our-generation",
+        "type": 301
+      },
+      {
+        "source": "/reblog/69099780086",
+        "destination": "/posts/angellist-is-the-nasdaq-of-our-generation",
+        "type": 301
+      },
+      {
+        "source": "/reblog/69099780086/**",
+        "destination": "/posts/angellist-is-the-nasdaq-of-our-generation",
+        "type": 301
+      },
+      {
+        "source": "/post/49773016181",
         "destination": "/posts/drafting-your-first-investment-round",
         "type": 301
       },
       {
-        "source": "/post/39650373908/why-the-future-needs-a-brandname",
+        "source": "/post/49773016181/**",
+        "destination": "/posts/drafting-your-first-investment-round",
+        "type": 301
+      },
+      {
+        "source": "/reblog/49773016181",
+        "destination": "/posts/drafting-your-first-investment-round",
+        "type": 301
+      },
+      {
+        "source": "/reblog/49773016181/**",
+        "destination": "/posts/drafting-your-first-investment-round",
+        "type": 301
+      },
+      {
+        "source": "/post/39650373908",
         "destination": "/posts/why-the-future-needs-a-brandname",
         "type": 301
       },
       {
-        "source": "/post/37192659101/startup-mentoring-sessions-how-to-be-a-decent",
+        "source": "/post/39650373908/**",
+        "destination": "/posts/why-the-future-needs-a-brandname",
+        "type": 301
+      },
+      {
+        "source": "/reblog/39650373908",
+        "destination": "/posts/why-the-future-needs-a-brandname",
+        "type": 301
+      },
+      {
+        "source": "/reblog/39650373908/**",
+        "destination": "/posts/why-the-future-needs-a-brandname",
+        "type": 301
+      },
+      {
+        "source": "/post/37192659101",
         "destination": "/posts/startup-mentoring-sessions-how-to-be-a-decent-maybe-even-good-startup-mentor",
         "type": 301
       },
       {
-        "source": "/post/36812415337/startup-mentoring-sessions-how-to-get-the-most",
+        "source": "/post/37192659101/**",
+        "destination": "/posts/startup-mentoring-sessions-how-to-be-a-decent-maybe-even-good-startup-mentor",
+        "type": 301
+      },
+      {
+        "source": "/reblog/37192659101",
+        "destination": "/posts/startup-mentoring-sessions-how-to-be-a-decent-maybe-even-good-startup-mentor",
+        "type": 301
+      },
+      {
+        "source": "/reblog/37192659101/**",
+        "destination": "/posts/startup-mentoring-sessions-how-to-be-a-decent-maybe-even-good-startup-mentor",
+        "type": 301
+      },
+      {
+        "source": "/post/36812415337",
         "destination": "/posts/startup-mentoring-sessions-how-to-get-the-most-out-of-it",
         "type": 301
       },
       {
-        "source": "/post/36585126176/the-founders-lie-about-comfort-zones",
+        "source": "/post/36812415337/**",
+        "destination": "/posts/startup-mentoring-sessions-how-to-get-the-most-out-of-it",
+        "type": 301
+      },
+      {
+        "source": "/reblog/36812415337",
+        "destination": "/posts/startup-mentoring-sessions-how-to-get-the-most-out-of-it",
+        "type": 301
+      },
+      {
+        "source": "/reblog/36812415337/**",
+        "destination": "/posts/startup-mentoring-sessions-how-to-get-the-most-out-of-it",
+        "type": 301
+      },
+      {
+        "source": "/post/36585126176",
         "destination": "/posts/the-founders-lie-about-comfort-zones",
         "type": 301
       },
       {
-        "source": "/post/36210460838/about-the-other-startup-hubs",
+        "source": "/post/36585126176/**",
+        "destination": "/posts/the-founders-lie-about-comfort-zones",
+        "type": 301
+      },
+      {
+        "source": "/reblog/36585126176",
+        "destination": "/posts/the-founders-lie-about-comfort-zones",
+        "type": 301
+      },
+      {
+        "source": "/reblog/36585126176/**",
+        "destination": "/posts/the-founders-lie-about-comfort-zones",
+        "type": 301
+      },
+      {
+        "source": "/post/36210460838",
         "destination": "/posts/about-the-other-startup-hubs",
         "type": 301
       },
       {
-        "source": "/post/29616785572/why-i-am-leaving-my-own-company",
+        "source": "/post/36210460838/**",
+        "destination": "/posts/about-the-other-startup-hubs",
+        "type": 301
+      },
+      {
+        "source": "/reblog/36210460838",
+        "destination": "/posts/about-the-other-startup-hubs",
+        "type": 301
+      },
+      {
+        "source": "/reblog/36210460838/**",
+        "destination": "/posts/about-the-other-startup-hubs",
+        "type": 301
+      },
+      {
+        "source": "/post/29616785572",
         "destination": "/posts/why-i-am-leaving-my-own-company",
         "type": 301
       },
       {
-        "source": "/post/28412458920/how-global-media-communication-changes-in-a",
+        "source": "/post/29616785572/**",
+        "destination": "/posts/why-i-am-leaving-my-own-company",
+        "type": 301
+      },
+      {
+        "source": "/reblog/29616785572",
+        "destination": "/posts/why-i-am-leaving-my-own-company",
+        "type": 301
+      },
+      {
+        "source": "/reblog/29616785572/**",
+        "destination": "/posts/why-i-am-leaving-my-own-company",
+        "type": 301
+      },
+      {
+        "source": "/post/28412458920",
         "destination": "/posts/how-global-media-communication-changes-in-a-transparent-world",
         "type": 301
       },
       {
-        "source": "/post/28064173056/peter-thiels-startup-class-notes-as-pdf",
+        "source": "/post/28412458920/**",
+        "destination": "/posts/how-global-media-communication-changes-in-a-transparent-world",
+        "type": 301
+      },
+      {
+        "source": "/reblog/28412458920",
+        "destination": "/posts/how-global-media-communication-changes-in-a-transparent-world",
+        "type": 301
+      },
+      {
+        "source": "/reblog/28412458920/**",
+        "destination": "/posts/how-global-media-communication-changes-in-a-transparent-world",
+        "type": 301
+      },
+      {
+        "source": "/post/28064173056",
         "destination": "/posts/peter-thiels-startup-class-notes-as-pdf",
         "type": 301
       },
       {
-        "source": "/post/17313437389/my-addressbook-keep-it-telephone-numbers-are-a",
+        "source": "/post/28064173056/**",
+        "destination": "/posts/peter-thiels-startup-class-notes-as-pdf",
+        "type": 301
+      },
+      {
+        "source": "/reblog/28064173056",
+        "destination": "/posts/peter-thiels-startup-class-notes-as-pdf",
+        "type": 301
+      },
+      {
+        "source": "/reblog/28064173056/**",
+        "destination": "/posts/peter-thiels-startup-class-notes-as-pdf",
+        "type": 301
+      },
+      {
+        "source": "/post/17313437389",
         "destination": "/posts/my-addressbook-keep-it-telephone-numbers-are-a-disgrace-to-our-generation",
         "type": 301
       },
       {
-        "source": "/post/16812835593/sht-twitter-is-exciting-again",
+        "source": "/post/17313437389/**",
+        "destination": "/posts/my-addressbook-keep-it-telephone-numbers-are-a-disgrace-to-our-generation",
+        "type": 301
+      },
+      {
+        "source": "/reblog/17313437389",
+        "destination": "/posts/my-addressbook-keep-it-telephone-numbers-are-a-disgrace-to-our-generation",
+        "type": 301
+      },
+      {
+        "source": "/reblog/17313437389/**",
+        "destination": "/posts/my-addressbook-keep-it-telephone-numbers-are-a-disgrace-to-our-generation",
+        "type": 301
+      },
+      {
+        "source": "/post/16812835593",
         "destination": "/posts/shit-twitter-is-exciting-again",
         "type": 301
       },
       {
-        "source": "/post/16308736248/the-things-first-time-founders-do",
+        "source": "/post/16812835593/**",
+        "destination": "/posts/shit-twitter-is-exciting-again",
+        "type": 301
+      },
+      {
+        "source": "/reblog/16812835593",
+        "destination": "/posts/shit-twitter-is-exciting-again",
+        "type": 301
+      },
+      {
+        "source": "/reblog/16812835593/**",
+        "destination": "/posts/shit-twitter-is-exciting-again",
+        "type": 301
+      },
+      {
+        "source": "/post/16308736248",
         "destination": "/posts/the-things-first-time-founders-do",
         "type": 301
       },
       {
-        "source": "/post/15672435659/the-unannounced-updates-to-facebooks-social",
+        "source": "/post/16308736248/**",
+        "destination": "/posts/the-things-first-time-founders-do",
+        "type": 301
+      },
+      {
+        "source": "/reblog/16308736248",
+        "destination": "/posts/the-things-first-time-founders-do",
+        "type": 301
+      },
+      {
+        "source": "/reblog/16308736248/**",
+        "destination": "/posts/the-things-first-time-founders-do",
+        "type": 301
+      },
+      {
+        "source": "/post/15672435659",
+        "destination": "/posts/the-unannounced-updates-to-facebooks-social-plugins-and-how-to-use-them",
+        "type": 301
+      },
+      {
+        "source": "/post/15672435659/**",
+        "destination": "/posts/the-unannounced-updates-to-facebooks-social-plugins-and-how-to-use-them",
+        "type": 301
+      },
+      {
+        "source": "/reblog/15672435659",
+        "destination": "/posts/the-unannounced-updates-to-facebooks-social-plugins-and-how-to-use-them",
+        "type": 301
+      },
+      {
+        "source": "/reblog/15672435659/**",
         "destination": "/posts/the-unannounced-updates-to-facebooks-social-plugins-and-how-to-use-them",
         "type": 301
       }
