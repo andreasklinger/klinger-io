@@ -127,7 +127,7 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
           <span className="text-base lg:text-lg text-sky-600 dark:text-sky-400 font-bold whitespace-nowrap">
             All posts
           </span>
-          <ArrowLeftIcon className="h-3 text-coolGray-300 group-hover:text-coolGray-400 dark:text-coolGray-700 dark:group-hover:text-coolGray-600 group-hover:translate-x-2 transition-all" />
+          <ArrowLeftIcon className="h-3 text-gray-300 group-hover:text-gray-400 dark:text-gray-700 dark:group-hover:text-gray-600 group-hover:translate-x-2 transition-all" />
         </a>
       </Link>
     </div>

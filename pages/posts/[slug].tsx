@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps<PostPageProps> = async ({
   // Read and bundle MDX source code
   const filePath = join(process.cwd(), 'posts', `${slug}.mdx`);
   const mdxSource = readFileSync(filePath, 'utf8');
-  const bundleResult = await bundleMDX(mdxSource);
+  const bundleResult = await bundleMDX({ source: mdxSource });
 
   // Create necessary post data for client
   const sourceCode = bundleResult.code;
@@ -108,7 +108,12 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
           {publishedAt} · {readingTime} · {views} views
         </p>
 
-        <BlogPost components={{ Image: PostImage }} />
+        {/*
+        Since the return type "null" was not added to the component types of
+        "mdx-bundler", but it is included by default in the "FC" type of React,
+        I cast PostImage to "any". In the future, this may be removed again.
+        */}
+        <BlogPost components={{ Image: PostImage as any }} />
       </article>
     </>
   );

@@ -20,11 +20,11 @@ export const PostPreview: FC<PostPreviewProps> = ({
     <Link href={`/posts/${slug}`}>
       <a className="prevent-default group">
         <div className="md:flex md:justify-between space-y-3 md:space-y-0 md:space-x-8 lg:space-x-10">
-          <Heading className="text-coolGray-800 dark:text-coolGray-200 text-lg md:text-xl lg:text-2xl leading-normal md:leading-normal lg:leading-normal">
+          <Heading className="text-gray-800 dark:text-gray-200 text-lg md:text-xl lg:text-2xl leading-normal md:leading-normal lg:leading-normal">
             {title}
           </Heading>
           {views !== undefined && (
-            <div className="text-base lg:text-lg text-coolGray-500 whitespace-nowrap">
+            <div className="text-base lg:text-lg text-gray-500 whitespace-nowrap">
               {views} views
             </div>
           )}

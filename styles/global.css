@@ -12,16 +12,16 @@ h4 {
   @apply text-base md:text-lg lg:text-xl;
 }
 :is(h1, h2, h3, h4) {
-  @apply text-coolGray-800 dark:text-coolGray-200 leading-normal md:leading-normal lg:leading-normal;
+  @apply text-gray-800 dark:text-gray-200 leading-normal md:leading-normal lg:leading-normal;
 }
 :is(h2, h3, h4) {
   @apply font-bold;
 }
 p {
-  @apply text-lg lg:text-xl text-coolGray-600 dark:text-coolGray-400 leading-relaxed lg:leading-relaxed;
+  @apply text-lg lg:text-xl text-gray-600 dark:text-gray-400 leading-relaxed lg:leading-relaxed;
 }
 strong {
-  @apply text-coolGray-700 dark:text-coolGray-300 font-bold;
+  @apply text-gray-700 dark:text-gray-300 font-bold;
 }
 
 /* Blockquotes */
@@ -41,7 +41,7 @@ a:not(.prevent-default) {
 
 /* Lists */
 ul:not(.prevent-default) {
-  @apply list-square;
+  @apply list-[square];
 }
 ol:not(.prevent-default) {
   @apply list-decimal;
@@ -50,12 +50,12 @@ ol:not(.prevent-default) {
   @apply ml-5;
 }
 :is(ul, ol):not(.prevent-default) li {
-  @apply pl-1 md:pl-2 lg:text-lg text-coolGray-700 dark:text-coolGray-300 leading-relaxed lg:leading-relaxed;
+  @apply pl-1 md:pl-2 lg:text-lg text-gray-700 dark:text-gray-300 leading-relaxed lg:leading-relaxed;
 }
 
 /* Code */
 pre {
-  @apply w-full bg-blueGray-800 p-4 md:p-6 rounded-md text-sm md:text-base text-coolGray-300 break-all whitespace-normal;
+  @apply w-full bg-slate-800 p-4 md:p-6 rounded-md text-sm md:text-base text-gray-300 break-all whitespace-normal;
 }
 
 /* Spacing */

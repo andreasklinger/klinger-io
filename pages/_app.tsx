@@ -73,30 +73,30 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="relative">
-        <div className="w-full h-full absolute -z-1 top-0 left-0 animate-pulse-slow">
+        <div className="w-full h-full absolute z-[-1] top-0 left-0 animate-[pulse_15s_cubic-bezier(.4,0,.6,1)_infinite]">
           <div
-            className="w-full h-full opacity-10 dark:opacity-15"
+            className="w-full h-full opacity-10 dark:opacity-[.15]"
             style={{ background }}
           />
         </div>
 
-        <header className="w-full fixed z-20 top-0 left-0 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-filter backdrop-blur p-4 md:p-5 lg:py-6 lg:px-10">
+        <header className="w-full fixed z-20 top-0 left-0 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-blur p-4 md:p-5 lg:py-6 lg:px-10">
           <nav className="flex justify-between">
             <Link href="/">
-              <a className="prevent-default p-3 -m-3 text-lg lg:text-xl text-coolGray-800 hover:text-coolGray-900 dark:text-coolGray-200 dark:hover:text-coolGray-100 font-semibold transition-colors">
+              <a className="prevent-default p-3 -m-3 text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors">
                 Andreas Klinger
               </a>
             </Link>
 
-            <div className="flex items-center space-x-6 md:space-x-8 lg:space-x-10 text-coolGray-600 dark:text-coolGray-400 transition-colors">
+            <div className="flex items-center space-x-6 md:space-x-8 lg:space-x-10 text-gray-600 dark:text-gray-400 transition-colors">
               <Link href="/posts">
-                <a className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-coolGray-800 dark:hover:text-coolGray-200">
+                <a className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-gray-800 dark:hover:text-gray-200">
                   Posts
                 </a>
               </Link>
 
               <button
-                className="w-4 lg:w-5 h-4 lg:h-5 box-content p-3 -m-3 hover:text-coolGray-800 dark:hover:text-coolGray-200"
+                className="w-4 lg:w-5 h-4 lg:h-5 box-content p-3 -m-3 hover:text-gray-800 dark:hover:text-gray-200"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 type="button"
               >
@@ -110,7 +110,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </main>
 
-        <footer className="md:flex md:justify-between text-coolGray-500 space-y-2 md:space-y-0 px-4 pb-6 md:px-5 md:pb-4 lg:px-10 lg:pb-5">
+        <footer className="md:flex md:justify-between text-gray-500 space-y-2 md:space-y-0 px-4 pb-6 md:px-5 md:pb-4 lg:px-10 lg:pb-5">
           <div>&copy; Copyright {new Date().getFullYear()} Andreas Klinger</div>
           <div className="text-sm md:text-base leading-loose">
             <a

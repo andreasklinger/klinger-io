@@ -31,7 +31,7 @@ class MyDocument extends Document {
           />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         </Head>
-        <body className="bg-white dark:bg-black text-coolGray-700 dark:text-coolGray-300">
+        <body className="bg-white dark:bg-black text-gray-700 dark:text-gray-300">
           <Main />
           <NextScript />
         </body>

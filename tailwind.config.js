@@ -1,16 +1,9 @@
-const colors = require('tailwindcss/colors');
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.tsx', './components/**/*.tsx'],
   darkMode: 'class',
   theme: {
-    colors: {
-      ...colors,
-      transparent: 'transparent',
-      current: 'currentColor',
-    },
     container: {
       center: true,
       padding: {
@@ -25,25 +18,10 @@ module.exports = {
       },
     },
     extend: {
-      animation: {
-        'pulse-slow': 'pulse 15s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      },
       fontFamily: {
         sans: ['Nunito Sans', ...fontFamily.sans],
       },
-      listStyleType: {
-        square: 'square',
-      },
-      opacity: {
-        15: '.15',
-      },
-      zIndex: {
-        '-1': '-1',
-      },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
