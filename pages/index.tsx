@@ -6,7 +6,6 @@ import {
   TwitterColorIcon,
   LinkedInColorIcon,
   GitHubIcon,
-  InstagramColorIcon,
   ArrowLeftIcon,
 } from '../icons';
 import { PostFrontMatter } from '../types';
@@ -57,7 +56,7 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
     </div>
 
     <p className="mt-6 md:mt-8 lg:mt-10">
-      My name's Andreas Klinger.
+      My name&apos;s Andreas Klinger.
     </p>
     <p>
       I was founding team &amp; CTO of <a href="https://www.producthunt.com" target="_blank" rel="noreferrer">Product Hunt</a>, 
@@ -70,8 +69,8 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
     </p>
 
     <p> 
-      I was lucky to learn from <a href="/posts/%F0%9F%99%8F">a lot of people</a> throughout my career.<br/>
-      On this page i try to <a href="/posts/">summarize some learnings</a>.
+      I was lucky to learn from <Link href="/posts/%F0%9F%99%8F"><a>a lot of people</a></Link> throughout my career.<br/>
+      On this page i try to <Link href="/posts/"><a>summarize some learnings</a></Link>.
     </p>
 
     <ul className="prevent-default flex space-x-8 md:space-x-9 lg:space-x-10 mt-6 md:mt-8 lg:mt-10">
@@ -93,7 +92,7 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
           <a
             className="prevent-default h-8 lg:h-9 block text-black dark:text-white"
             href={href}
-            target="_blank" rel="noreferrer"
+            target="_blank"
             rel="noreferrer"
           >
             <Icon />
