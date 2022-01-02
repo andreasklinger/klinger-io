@@ -9,8 +9,7 @@ export async function getFrontMatterOfPosts() {
   const fileNames = readdirSync(join(process.cwd(), 'posts'));
 
   // Create list with front matter of all blog post
-  const allPosts: PostFrontMatter[] = [];
-  await Promise.all(
+  const allPosts: PostFrontMatter[] = await Promise.all(
     fileNames.map(async (fileName) => {
       const filePath = join(process.cwd(), 'posts', fileName);
       const fileData = readFileSync(filePath, 'utf8');
@@ -20,7 +19,7 @@ export async function getFrontMatterOfPosts() {
       >;
       const slug = fileName.replace('.mdx', '');
       const views = (await fetchDatabase<number>(`/views/${slug}`)) || 0;
-      allPosts.push({ ...frontMatter, slug, views });
+      return { ...frontMatter, slug, views };
     })
   );
 
