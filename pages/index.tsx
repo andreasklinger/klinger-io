@@ -55,7 +55,7 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
       <h1>Hey! ✌️</h1>
     </div>
 
-    <p className="mt-6 md:mt-8 lg:mt-10">My name&apos;s Andreas Klinger.</p>
+    <p className="mt-6 md:mt-8 lg:mt-10">My name is Andreas Klinger.</p>
     <p>
       I was founding team &amp; CTO of{' '}
       <a href="https://www.producthunt.com" target="_blank" rel="noreferrer">
