@@ -87,7 +87,7 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
       </Link>{' '}
       throughout my career.
       <br />
-      On this page i try to{' '}
+      On this page I try to{' '}
       <Link href="/posts/">
         <a>summarize some learnings</a>
       </Link>
