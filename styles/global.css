@@ -31,7 +31,7 @@ blockquote {
 
 /* Links */
 a:not(.prevent-default) {
-  @apply text-sky-600 dark:text-sky-400 font-semibold break-all;
+  @apply text-sky-600 dark:text-sky-400 font-semibold break-words;
 }
 
 /* Media */
