@@ -1,4 +1,5 @@
 module.exports = {
+  websiteUrl: 'https://klinger.io',
   analyticsTrackingId: 'UA-4425769-6',
   firebaseDatabaseUrl: 'https://klinger-io-default-rtdb.firebaseio.com',
   responsiveImage: {
