@@ -2,7 +2,14 @@ import { GetStaticProps, NextPage } from 'next';
 import { useMemo, useState } from 'react';
 import { Head, PostList } from '../../components';
 import { getFrontMatterOfPosts } from '../../helpers/getFrontMatterOfPosts';
+import { generateRssFeed } from '../../helpers/generateRssFeed';
 import { PostFrontMatter } from '../../types';
+
+const pageMeta = {
+  title: 'All blog posts | Andreas Klinger',
+  description:
+    'Learn more about startups, remote work, funding, software and useful tools I use. In the blog posts I share my experience from the past 10+ years.',
+};
 
 interface PostsPageProps {
   posts: PostFrontMatter[];
@@ -12,6 +19,9 @@ interface PostsPageProps {
 export const getStaticProps: GetStaticProps<PostsPageProps> = async () => {
   // Create list with all blog post
   const posts = await getFrontMatterOfPosts();
+
+  // Genearte RSS feed and add it to public directory
+  generateRssFeed(pageMeta, posts);
 
   // Return page props
   return { props: { posts } };
@@ -33,10 +43,7 @@ const PostsPage: NextPage<PostsPageProps> = ({ posts }) => {
 
   return (
     <>
-      <Head
-        title="All blog posts | Andreas Klinger"
-        description="Learn more about startups, remote work, funding, software and useful tools I use. In the blog posts I share my experience from the past 10+ years."
-      />
+      <Head {...pageMeta} />
 
       <h1>All blog posts</h1>
       <p>
