@@ -4,7 +4,7 @@ import { join } from 'path';
 import { PostFrontMatter } from '../types';
 import { fetchDatabase } from './fetchDatabase';
 
-export async function getFrontMatterOfPosts() {
+export async function getFrontMatterOfPosts(): Promise<PostFrontMatter[]> {
   // Get blog post file names
   const fileNames = readdirSync(join(process.cwd(), 'posts'));
 
