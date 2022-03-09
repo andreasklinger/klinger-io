@@ -1,13 +1,8 @@
 import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
-import { Head, Image, PostList } from '../components';
+import { Head, Image, LinkButton, PostList } from '../components';
 import { getFrontMatterOfPosts } from '../helpers/getFrontMatterOfPosts';
-import {
-  TwitterColorIcon,
-  LinkedInColorIcon,
-  GitHubIcon,
-  ArrowLeftIcon,
-} from '../icons';
+import { TwitterColorIcon, LinkedInColorIcon, GitHubIcon } from '../icons';
 import { PostFrontMatter } from '../types';
 
 // Build time Node.js code
@@ -142,16 +137,9 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
     <h2 className="mt-12 md:mt-16 lg:mt-20">Popular posts</h2>
     <PostList className="mt-8 md:mt-10 lg:mt-12" posts={popularPosts} />
 
-    <div className="mt-8 md:mt-10 lg:mt-12">
-      <Link href="/posts">
-        <a className="prevent-default group p-3 -m-3 inline-flex items-center space-x-3">
-          <span className="text-base lg:text-lg text-sky-600 dark:text-sky-400 font-bold whitespace-nowrap">
-            All posts
-          </span>
-          <ArrowLeftIcon className="h-3 text-gray-300 group-hover:text-gray-400 dark:text-gray-700 dark:group-hover:text-gray-600 group-hover:translate-x-2 transition-all" />
-        </a>
-      </Link>
-    </div>
+    <LinkButton className="mt-8 md:mt-10 lg:mt-12" href="/posts">
+      All posts
+    </LinkButton>
   </>
 );
 
