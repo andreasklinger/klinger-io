@@ -92,17 +92,26 @@ function MyApp({ Component, pageProps }: AppProps) {
         <header className="w-full fixed z-20 top-0 left-0 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-blur p-4 md:p-5 lg:py-6 lg:px-10">
           <nav className="flex justify-between">
             <Link href="/">
-              <a className="prevent-default p-3 -m-3 text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors">
+              <a className="prevent-default max-w-[45%] p-3 -m-3 text-base sm:text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
                 Andreas Klinger
               </a>
             </Link>
 
-            <div className="flex items-center space-x-6 md:space-x-8 lg:space-x-10 text-gray-600 dark:text-gray-400 transition-colors">
+            <div className="flex items-center space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-10 text-gray-600 dark:text-gray-400 transition-colors">
               <Link href="/posts">
                 <a className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-gray-800 dark:hover:text-gray-200">
                   Posts
                 </a>
               </Link>
+
+              <a
+                className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-gray-800 dark:hover:text-gray-200"
+                href="/rss.xml"
+                target="_blank"
+                rel="noreferrer"
+              >
+                RSS
+              </a>
 
               <button
                 className="w-4 lg:w-5 h-4 lg:h-5 box-content p-3 -m-3 hover:text-gray-800 dark:hover:text-gray-200"
