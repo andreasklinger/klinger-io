@@ -69,7 +69,7 @@ const HomePage: NextPage<PostsPageProps> = ({ latestPosts, popularPosts }) => (
     </p>
     <p>
       I also angel invest via{' '}
-      <a href="https://remotefirstcapital.com" target="_blank" rel="noreferrer">
+      <a href="http://remotefirstcapital.com" target="_blank" rel="noreferrer">
         Remote First Capital
       </a>
       .
