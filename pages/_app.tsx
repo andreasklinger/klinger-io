@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useMemo, useState } from 'react';
+import { useRef, useEffect, useMemo, useState } from 'react';
 import { trackAnalyticsPageview } from '../helpers/trackAnalyticsPageview';
 import { ThemeIcon, GitHubIcon } from '../icons';
 import 'tailwindcss/tailwind.css';
@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   // Create theme and background state
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [background, setBackground] = useState<string>();
+  const animationFrameRequest = useRef<any>();
 
   // Track Google Analytics pageviews when route changes
   useEffect(() => {
@@ -46,33 +47,61 @@ function MyApp({ Component, pageProps }: AppProps) {
   /**
    * It randomly updates the page background.
    */
-  const updateBackground = () => {
+
+  const backgroundRenderingSettings = {
+    colors: ['#00A5FF', '#00FFC4', '#4500FF'],
+    opacityRange: {min: 30, max: 60},
+    opacityIncrement: 0.6,
+    fps: 30,
+    sectionHeight: 700,
+    sideOffset: 15,
+    startSide: Math.round(Math.random()),
+    positionEntropy: Math.floor(Math.random() * 12 - 6)
+  }
+
+  const updateBackground = (opacity: number) => {
     const { scrollHeight } = document.documentElement;
-    const sectionHeight = 700;
-    const colors = ['#00A5FF', '#00FFC4', '#4500FF'];
-    const switchSide = Math.round(Math.random());
+    const sectionHeight = backgroundRenderingSettings.sectionHeight;
+    const colors = backgroundRenderingSettings.colors;
+    const sections = Math.floor(scrollHeight / sectionHeight);
     const nextBackground = [];
-    for (let i = 0; i < scrollHeight / sectionHeight; i++) {
+    for (let i = 0; i < sections; i++) {
       const left =
-        (i + switchSide) % 2 ? 15 : 85 + Math.floor(Math.random() * 12 - 6);
+        ((i + backgroundRenderingSettings.startSide) % 2 ?
+          backgroundRenderingSettings.sideOffset : 100-backgroundRenderingSettings.sideOffset) + backgroundRenderingSettings.positionEntropy;
       const top = i * sectionHeight + sectionHeight / 2;
-      const color = colors[Math.floor(Math.random() * colors.length)];
+      const hexOpacity = Math.round(opacity/100*255).toString(16);
+      const color = colors[i % colors.length];
       nextBackground.push(
-        `radial-gradient(circle at ${left}% ${top}px, ${color}, ${color}00 500px)`
+        `radial-gradient(circle at ${left}% ${top}px, ${color}${hexOpacity}, ${color}00 500px)`
       );
     }
-    setBackground(nextBackground.join(', '));
+    setBackground(nextBackground.join(', '));  
   };
 
-  // Set initial background and update it when path or window size change
-  useEffect(updateBackground, [router.asPath]);
-  useEffect(() => window.addEventListener('resize', updateBackground), []);
+  const renderBackground = (opacity: number, animationDirection: number, tick: number) => {
+    if (tick % ~~(1000/backgroundRenderingSettings.fps) == 0) {
+      if (~~opacity == backgroundRenderingSettings.opacityRange.min || ~~opacity == backgroundRenderingSettings.opacityRange.max) {
+        animationDirection *= -1
+      }
+
+      opacity += animationDirection * backgroundRenderingSettings.opacityIncrement
+      updateBackground(opacity) 
+    }
+    
+    animationFrameRequest.current = requestAnimationFrame(() => renderBackground(opacity, animationDirection, ++tick))
+  }
+
+  useEffect(() => {
+    animationFrameRequest.current = requestAnimationFrame(() => renderBackground(backgroundRenderingSettings.opacityRange.max, 1, 0));
+    return () => cancelAnimationFrame(animationFrameRequest.current) 
+  }, []); 
 
   // Create background color depending on theme
   const bgColor = useMemo(
     () => (theme === 'light' ? '#ffffff' : '#000000'),
     [theme]
-  );
+  ); 
 
   return (
     <>
@@ -82,9 +111,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="relative">
-        <div className="w-full h-full absolute z-[-1] top-0 left-0 animate-[pulse_15s_cubic-bezier(.4,0,.6,1)_infinite]">
+        <div className="w-full h-full absolute z-[-1] top-0 left-0">
           <div
-            className="w-full h-full opacity-10 dark:opacity-[.15]"
+            className="w-full h-full opacity-30 dark:opacity-[.35]"
             style={{ background }}
           />
         </div>
