@@ -16,7 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   // Create theme and background state
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [background, setBackground] = useState<string>();
-  const animationFrameRequest = useRef<any>();
+  const backgroundAnimationFrameRequest = useRef<any>();
+  const backgroundElement = useRef<HTMLDivElement>(null);
 
   // Track Google Analytics pageviews when route changes
   useEffect(() => {
@@ -50,8 +51,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const backgroundRenderingSettings = {
     colors: ['#00A5FF', '#00FFC4', '#4500FF'],
-    opacityRange: {min: 30, max: 60},
-    opacityIncrement: 0.6,
+    opacityRange: {min: 5, max: 15},
+    opacityIncrement: 0.3,
     fps: 30,
     sectionHeight: 700,
     sideOffset: 15,
@@ -59,7 +60,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     positionEntropy: Math.floor(Math.random() * 12 - 6)
   }
 
-  const updateBackground = (opacity: number) => {
+  const updateBackground = () => {
     const { scrollHeight } = document.documentElement;
     const sectionHeight = backgroundRenderingSettings.sectionHeight;
     const colors = backgroundRenderingSettings.colors;
@@ -70,31 +71,38 @@ function MyApp({ Component, pageProps }: AppProps) {
         ((i + backgroundRenderingSettings.startSide) % 2 ?
           backgroundRenderingSettings.sideOffset : 100-backgroundRenderingSettings.sideOffset) + backgroundRenderingSettings.positionEntropy;
       const top = i * sectionHeight + sectionHeight / 2;
-      const hexOpacity = Math.round(opacity/100*255).toString(16);
-      const color = colors[i % colors.length];
+      const color = colors[Math.floor(Math.random() * colors.length)];
       nextBackground.push(
-        `radial-gradient(circle at ${left}% ${top}px, ${color}${hexOpacity}, ${color}00 500px)`
+        `radial-gradient(circle at ${left}% ${top}px, ${color}, ${color}00 500px)`
       );
     }
     setBackground(nextBackground.join(', '));  
   };
 
-  const renderBackground = (opacity: number, animationDirection: number, tick: number) => {
+  const updateBackgroundOpacity = (opacity: number) => {
+    backgroundElement.current!.style.opacity = `${opacity}%`
+  }
+
+  const animateBackgroundOpacity = (opacity: number, animationDirection: number, tick: number) => {
     if (tick % ~~(1000/backgroundRenderingSettings.fps) == 0) {
       if (~~opacity == backgroundRenderingSettings.opacityRange.min || ~~opacity == backgroundRenderingSettings.opacityRange.max) {
         animationDirection *= -1
       }
 
       opacity += animationDirection * backgroundRenderingSettings.opacityIncrement
-      updateBackground(opacity) 
+
+      updateBackgroundOpacity(opacity)
     }
     
-    animationFrameRequest.current = requestAnimationFrame(() => renderBackground(opacity, animationDirection, ++tick))
+    backgroundAnimationFrameRequest.current = requestAnimationFrame(() => animateBackgroundOpacity(opacity, animationDirection, ++tick))
   }
 
+  useEffect(updateBackground, [router.asPath]);
+  useEffect(() => window.addEventListener('resize', updateBackground), []);
+
   useEffect(() => {
-    animationFrameRequest.current = requestAnimationFrame(() => renderBackground(backgroundRenderingSettings.opacityRange.max, 1, 0));
-    return () => cancelAnimationFrame(animationFrameRequest.current) 
+    backgroundAnimationFrameRequest.current = requestAnimationFrame(() => animateBackgroundOpacity(backgroundRenderingSettings.opacityRange.max, 1, 0));
+    return () => cancelAnimationFrame(backgroundAnimationFrameRequest.current) 
   }, []); 
 
   // Create background color depending on theme
@@ -113,8 +121,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="relative">
         <div className="w-full h-full absolute z-[-1] top-0 left-0">
           <div
-            className="w-full h-full opacity-30 dark:opacity-[.35]"
+            className="w-full h-full opacity-10 dark:opacity-[.15]"
             style={{ background }}
+            ref={backgroundElement}
           />
         </div>
 
