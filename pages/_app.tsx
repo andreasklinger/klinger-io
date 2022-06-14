@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useMemo, useState } from 'react';
+import { useRef, useEffect, useMemo, useState } from 'react';
 import { trackAnalyticsPageview } from '../helpers/trackAnalyticsPageview';
 import { ThemeIcon, GitHubIcon } from '../icons';
 import 'tailwindcss/tailwind.css';
@@ -15,7 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // Create theme and background state
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [background, setBackground] = useState<string>();
+  const gradientElementRef = useRef<HTMLDivElement>(null);
+  const opacityElementRef = useRef<HTMLDivElement>(null);
 
   // Track Google Analytics pageviews when route changes
   useEffect(() => {
@@ -50,23 +51,38 @@ function MyApp({ Component, pageProps }: AppProps) {
     const { scrollHeight } = document.documentElement;
     const sectionHeight = 700;
     const colors = ['#00A5FF', '#00FFC4', '#4500FF'];
-    const switchSide = Math.round(Math.random());
+    const startSide = Math.round(Math.random());
     const nextBackground = [];
     for (let i = 0; i < scrollHeight / sectionHeight; i++) {
       const left =
-        (i + switchSide) % 2 ? 15 : 85 + Math.floor(Math.random() * 12 - 6);
+        (i + startSide) % 2 ? 15 : 85 + Math.floor(Math.random() * 12 - 6);
       const top = i * sectionHeight + sectionHeight / 2;
       const color = colors[Math.floor(Math.random() * colors.length)];
       nextBackground.push(
         `radial-gradient(circle at ${left}% ${top}px, ${color}, ${color}00 500px)`
       );
     }
-    setBackground(nextBackground.join(', '));
+    gradientElementRef.current!.style.background = nextBackground.join(', ');
   };
 
   // Set initial background and update it when path or window size change
   useEffect(updateBackground, [router.asPath]);
   useEffect(() => window.addEventListener('resize', updateBackground), []);
+
+  // Animate background opacity with 10 FPS to reduce GPU load
+  useEffect(() => {
+    const fps = 10;
+    let opacity = 1;
+    let direction = 1;
+    setInterval(() => {
+      opacity += direction * (0.1 / fps);
+      if (opacity < 0 || opacity > 1) {
+        direction *= -1;
+      } else {
+        opacityElementRef.current!.style.opacity = opacity.toString();
+      }
+    }, 1000 / fps);
+  }, []);
 
   // Create background color depending on theme
   const bgColor = useMemo(
@@ -82,10 +98,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <div className="relative">
-        <div className="w-full h-full absolute z-[-1] top-0 left-0 animate-[pulse_15s_cubic-bezier(.4,0,.6,1)_infinite]">
+        <div
+          className="w-full h-full absolute z-[-1] top-0 left-0"
+          ref={opacityElementRef}
+        >
           <div
             className="w-full h-full opacity-10 dark:opacity-[.15]"
-            style={{ background }}
+            ref={gradientElementRef}
           />
         </div>
 
