@@ -320,22 +320,27 @@
       },
       {
         "source": "/post/71640845938",
-        "destination": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
+        "destination": "/posts/how-to-use-gmail-more-efficiently",
         "type": 301
       },
       {
         "source": "/post/71640845938/**",
-        "destination": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
+        "destination": "/posts/how-to-use-gmail-more-efficiently",
         "type": 301
       },
       {
         "source": "/reblog/71640845938",
-        "destination": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
+        "destination": "/posts/how-to-use-gmail-more-efficiently",
         "type": 301
       },
       {
         "source": "/reblog/71640845938/**",
-        "destination": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
+        "destination": "/posts/how-to-use-gmail-more-efficiently",
+        "type": 301
+      },
+      {
+        "source": "/posts/dont-drown-in-email-how-to-use-gmail-more-efficiently",
+        "destination": "/posts/how-to-use-gmail-more-efficiently",
         "type": 301
       },
       {

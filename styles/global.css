@@ -58,6 +58,11 @@ pre {
   @apply w-full bg-slate-800 p-4 md:p-6 rounded-md text-sm md:text-base text-gray-300 break-all whitespace-normal;
 }
 
+/* Horizontal rule */
+hr {
+  @apply border-t-2 border-t-gray-300 dark:border-t-gray-800;
+}
+
 /* Spacing */
 :is(main, article) > * + h2 {
   @apply mt-12 md:mt-16 lg:mt-20;
@@ -81,6 +86,10 @@ pre {
   :is(li + li, li > :is(ul, ol)),
 :is(main, article) > blockquote > * + * {
   @apply mt-2 md:mt-3 lg:mt-4;
+}
+:is(main, article) > * + hr,
+:is(main, article) > hr + *:not(h2, h3, h4) {
+  @apply mt-8 md:mt-10 lg:mt-12 !important;
 }
 
 /* Other */

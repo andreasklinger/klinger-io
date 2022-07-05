@@ -1,7 +1,7 @@
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  content: ['./pages/**/*.tsx', './components/**/*.tsx'],
+  content: ['./pages/**/*.tsx', './components/**/*.tsx', './posts/**/*.mdx'],
   darkMode: 'class',
   theme: {
     container: {
