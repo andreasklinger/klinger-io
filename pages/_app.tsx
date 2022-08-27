@@ -117,12 +117,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Link>
 
             <div className="flex items-center space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-10 text-gray-600 dark:text-gray-400 transition-colors">
-              <Link href="/posts">
-                <a className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-gray-800 dark:hover:text-gray-200">
-                  Posts
-                </a>
-              </Link>
-
               <a
                 className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-gray-800 dark:hover:text-gray-200"
                 href="/rss.xml"

@@ -39,23 +39,28 @@
         "type": 301
       },
       {
+        "source": "/posts",
+        "destination": "/",
+        "type": 301
+      },
+      {
         "source": "/page",
-        "destination": "/posts",
+        "destination": "/",
         "type": 301
       },
       {
         "source": "/page/**",
-        "destination": "/posts",
+        "destination": "/",
         "type": 301
       },
       {
         "source": "/archive",
-        "destination": "/posts",
+        "destination": "/",
         "type": 301
       },
       {
         "source": "/archive/**",
-        "destination": "/posts",
+        "destination": "/",
         "type": 301
       },
       {
