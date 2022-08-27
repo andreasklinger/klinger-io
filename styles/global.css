@@ -50,7 +50,7 @@ ol:not(.prevent-default) {
   @apply ml-5;
 }
 :is(ul, ol):not(.prevent-default) li {
-  @apply pl-1 md:pl-2 lg:text-lg text-gray-700 dark:text-gray-300 leading-relaxed lg:leading-relaxed;
+  @apply pl-1 md:pl-2 text-lg lg:text-xl text-gray-600 dark:text-gray-400 leading-relaxed lg:leading-relaxed;
 }
 
 /* Code */
