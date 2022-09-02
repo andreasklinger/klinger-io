@@ -3,26 +3,21 @@ import { FC } from 'react';
 import { useViews } from '../hooks';
 import { PostFrontMatter } from '../types';
 
-interface PostPreviewProps extends PostFrontMatter {
-  headingAs: 'h2' | 'h3';
-}
-
-export const PostPreview: FC<PostPreviewProps> = ({
+export const PostPreview: FC<PostFrontMatter> = ({
   title,
   summary,
   slug,
-  headingAs: Heading,
   ...post
 }) => {
   const views = useViews(slug, post.views);
 
   return (
     <Link href={`/posts/${slug}`}>
-      <a className="prevent-default group">
+      <a className="prevent-default group block">
         <div className="md:flex md:justify-between space-y-3 md:space-y-0 md:space-x-8 lg:space-x-10">
-          <Heading className="text-gray-800 dark:text-gray-200 text-lg md:text-xl lg:text-2xl leading-normal md:leading-normal lg:leading-normal">
+          <h2 className="text-gray-800 dark:text-gray-200 text-lg md:text-xl lg:text-2xl leading-normal md:leading-normal lg:leading-normal">
             {title}
-          </Heading>
+          </h2>
           {views !== undefined && (
             <div className="text-base lg:text-lg text-gray-500 whitespace-nowrap">
               {views} views

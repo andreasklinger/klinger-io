@@ -19,7 +19,7 @@ export const PostList: FC<PostListProps> = ({ className, posts }) => (
           previousPost={posts[index - 1]}
           posts={posts}
         />
-        <PostPreview headingAs="h2" {...post} />
+        <PostPreview {...post} />
       </li>
     ))}
   </ul>
