@@ -68,6 +68,8 @@ summary: 'Summary (max. 160 characters)'
 ---
 ```
 
+> To make a post stand out, you can add a tag that will be displayed on the overview page. For example: `tag: '🚀 Popular'`
+
 Step 5: Add content as markdown to file
 
 > Since it is a .mdx file, React elements (HTML) can be added between the markdown as JSX.
