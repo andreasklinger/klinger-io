@@ -7,6 +7,7 @@ export const PostPreview: FC<PostFrontMatter> = ({
   title,
   summary,
   slug,
+  tag,
   ...post
 }) => {
   const views = useViews(slug, post.views);
@@ -15,9 +16,16 @@ export const PostPreview: FC<PostFrontMatter> = ({
     <Link href={`/posts/${slug}`}>
       <a className="prevent-default group block">
         <div className="md:flex md:justify-between space-y-3 md:space-y-0 md:space-x-8 lg:space-x-10">
-          <h2 className="text-gray-800 dark:text-gray-200 text-lg md:text-xl lg:text-2xl leading-normal md:leading-normal lg:leading-normal">
-            {title}
-          </h2>
+          <div>
+            <h2 className="inline text-gray-800 dark:text-gray-200 text-lg md:text-xl lg:text-2xl leading-normal md:leading-normal lg:leading-normal">
+              {title}
+            </h2>
+            {tag && (
+              <div className="relative -top-px inline bg-emerald-500/10 dark:bg-emerald-400/10 rounded-lg text-xs lg:text-base font-semibold whitespace-nowrap text-emerald-500 dark:text-emerald-400 ml-3 lg:ml-5 py-1 px-2 lg:px-3">
+                {tag}
+              </div>
+            )}
+          </div>
           {views !== undefined && (
             <div className="text-base lg:text-lg text-gray-500 whitespace-nowrap">
               {views} views

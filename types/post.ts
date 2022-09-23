@@ -4,6 +4,7 @@ export interface PostFrontMatter {
   publishedAt: string;
   views: number;
   slug: string;
+  tag?: string;
 }
 
 export interface Post extends PostFrontMatter {
