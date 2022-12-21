@@ -1,10 +1,10 @@
-# Blog of Andreas Klinger
+# Blog of Midnight Madman
 
-In this repository you will find the source code for [klinger.io](https://klinger.io/).
+In this repository you will find the source code for my blog.
 
 ## Techstack
 
-It is a markdown based blog developed with [React](https://reactjs.org/), [Next](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [TypeScript](https://www.typescriptlang.org/). The site is statically hosted on [Firebase](https://firebase.google.com/) and uses the Realtime Database to capture and display the current views of each blog post.
+It is a markdown based blog developed with [React](https://reactjs.org/), [Next](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [TypeScript](https://www.typescriptlang.org/). It is still heavily based on a fork of https://github.com/andreasklinger/klinger-io.
 
 To reduce the bundle size, we replace [React](https://reactjs.org/) with [Preact](https://preactjs.com/) in the production build.
 
@@ -13,7 +13,7 @@ To reduce the bundle size, we replace [React](https://reactjs.org/) with [Preact
 Step 1: Clone repository
 
 ```bash
-git clone git@github.com:andreasklinger/klinger-io.git
+git clone git@github.com:midnight-madman/blog.git
 ```
 
 Step 2: Install dependencies
@@ -52,7 +52,7 @@ npm run deploy
 
 New blog posts can be added directly via the GitHub website.
 
-Step 1: Open [/posts](https://github.com/andreasklinger/klinger-io/tree/main/posts) directory
+Step 1: Open [/posts](https://github.com/midnight-madman/blog/tree/main/posts) directory
 
 Step 2: Click on "Add file" in upper right corner
 
@@ -78,7 +78,7 @@ Step 5: Add content as markdown to file
 
 Follow these steps to add a new image to a blog post that is not from an external source. In this way, the image is automatically saved in different quality levels during the building process to reduce network traffic.
 
-Step 1: Add your image to [/public/images](https://github.com/andreasklinger/klinger-io/tree/main/public/images)
+Step 1: Add your image to [/public/images](https://github.com/midnight-madman/blog/tree/main/public/images)
 
 Step 2: Use the image as follows
 
