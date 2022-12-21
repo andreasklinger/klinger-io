@@ -31,23 +31,7 @@ npm run dev
 
 ## Deployment
 
-Changes to the "main" branch that are added to the GitHub repository result in an automatic deployment of a static version on Firebase Hosting. Therefore, it is not necessary to update the website manually.
-
-If a circumstance requires manual deployment, perform the following steps:
-
-Step 1: Create production build
-
-```bash
-npm run build
-```
-
-Step 2: Deploy via Firebase
-
-```bash
-npm run deploy
-```
-
-> For this, the Firebase CLI must be installed globally (`npm install -g firebase-tools`) and it is required that you log in through it (`firebase login`). Furthermore, you need the necessary project permissions for the deployment.
+Changes to the "main" branch that are added to the GitHub repository result in an automatic deployment of a static version on Vercel. Therefore, it is not necessary to update the website manually.
 
 ## Add blog post
 
@@ -57,7 +41,7 @@ Step 1: Open [/posts](https://github.com/midnight-madman/blog/tree/main/posts) d
 
 Step 2: Click on "Add file" in upper right corner
 
-Step 3: Open [sluggenerator](https://www.slugenerator.com/) and convert title of post to a slug, which you then use with file extension ".mdx" as filename
+Step 3: Convert title of post to a slug e.g. `this-is-fun`, which you then use with file extension ".mdx" as filename
 
 Step 4: Insert following header into file and replace placeholders
 
