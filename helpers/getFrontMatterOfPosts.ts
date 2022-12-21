@@ -2,7 +2,6 @@ import { readFileSync, readdirSync } from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
 import { PostFrontMatter } from '../types';
-import { fetchDatabase } from './fetchDatabase';
 
 export async function getFrontMatterOfPosts(): Promise<PostFrontMatter[]> {
   // Get blog post file names
@@ -18,8 +17,7 @@ export async function getFrontMatterOfPosts(): Promise<PostFrontMatter[]> {
         'title' | 'summary' | 'publishedAt'
       >;
       const slug = fileName.replace('.mdx', '');
-      const views = (await fetchDatabase<number>(`/views/${slug}`)) || 0;
-      return { ...frontMatter, slug, views };
+      return { ...frontMatter, slug};
     })
   );
 

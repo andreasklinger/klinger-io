@@ -16,12 +16,16 @@ export function generateRssFeed(
   const rssFileName = 'rss.xml';
 
   // Create get XML string function
-  const getXmlString = (string: string): string =>
+  const getXmlString = (string: string): string => {
+    if (!string) {
+      return string
+    }
     // Replace special characters with their HTML entity
-    string.replace(
-      /[\u00A0-\u9999<>&]/g,
-      (i: string) => '&#' + i.charCodeAt(0) + ';'
+    return string.replace(
+        /[\u00A0-\u9999<>&]/g,
+        (i: string) => '&#' + i.charCodeAt(0) + ';'
     );
+  };
 
   // Create get date string function
   const getDateString = (date: string) => new Date(date).toUTCString();

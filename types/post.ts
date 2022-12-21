@@ -2,7 +2,6 @@ export interface PostFrontMatter {
   title: string;
   summary: string;
   publishedAt: string;
-  views: number;
   slug: string;
   tag?: string;
 }

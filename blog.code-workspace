@@ -6,7 +6,6 @@
       "**/.next": true,
       "**/out": true,
       "**/node_modules": true,
-      "**/.firebase": true
     }
   }
 }

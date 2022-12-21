@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const gradientElementRef = useRef<HTMLDivElement>(null);
   const opacityElementRef = useRef<HTMLDivElement>(null);
 
-  // Track Google Analytics pageviews when route changes
+  // Track Analytics pageviews when route changes
   useEffect(() => {
     router.events.on('routeChangeComplete', trackAnalyticsPageview);
     return () => {
@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const updateBackground = () => {
     const { scrollHeight } = document.documentElement;
     const sectionHeight = 700;
-    const colors = ['#00A5FF', '#00FFC4', '#4500FF'];
+    const colors = ['#4BB04F', '#90D7FF', '#FF9F1C'];
     const startSide = Math.round(Math.random());
     const nextBackground = [];
     for (let i = 0; i < scrollHeight / sectionHeight; i++) {
@@ -69,9 +69,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(updateBackground, [router.asPath]);
   useEffect(() => window.addEventListener('resize', updateBackground), []);
 
-  // Animate background opacity with 10 FPS to reduce GPU load
+  // Animate background opacity with 2 FPS to reduce GPU load
   useEffect(() => {
-    const fps = 10;
+    const fps = 2;
     let opacity = 1;
     let direction = 1;
     setInterval(() => {
@@ -112,7 +112,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <nav className="flex justify-between">
             <Link href="/">
               <a className="prevent-default max-w-[45%] p-3 -m-3 text-base sm:text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
-                Andreas Klinger
+                Midnight Madman
               </a>
             </Link>
 

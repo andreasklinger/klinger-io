@@ -5,7 +5,7 @@ import { Head } from '../components';
 const ErrorPage: NextPage = () => (
   <>
     <Head
-      title="404 | Andreas Klinger"
+      title="404 | Midnight Madman Blog"
       description="The page you’re looking for doesn’t exist. Return to the homepage."
     />
 

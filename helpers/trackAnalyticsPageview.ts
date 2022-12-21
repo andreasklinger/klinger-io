@@ -1,7 +1,10 @@
-import { analyticsTrackingId } from '../config';
+import {analyticsTrackingId} from '../config';
 
 export function trackAnalyticsPageview(url: string): void {
-  (<any>window).gtag('config', analyticsTrackingId, {
-    page_path: url,
-  });
+    // todo: update analytics provider
+    if (analyticsTrackingId) {
+        (<any>window).gtag('config', analyticsTrackingId, {
+            page_path: url,
+        });
+    }
 }

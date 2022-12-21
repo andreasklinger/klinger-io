@@ -19,12 +19,12 @@ export const Head: FC<HeadProps> = ({ title, description, image }) => {
       <meta property="og:url" content={`${websiteUrl}${router.asPath}`} />
       <link rel="canonical" href={`${websiteUrl}${router.asPath}`} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Andreas Klinger" />
+      <meta property="og:site_name" content="Midnight Madman Blog" />
       <meta property="og:description" content={description} />
       <meta property="og:title" content={title} />
       {image && <meta property="og:image" content={image} />}
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@andreasklinger" />
+      <meta name="twitter:site" content="@MadmanMidnight" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
