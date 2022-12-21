@@ -4,7 +4,8 @@ In this repository you will find the source code for my blog.
 
 ## Techstack
 
-It is a markdown based blog developed with [React](https://reactjs.org/), [Next](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [TypeScript](https://www.typescriptlang.org/). It is still heavily based on a fork of https://github.com/andreasklinger/klinger-io.
+It is a markdown based blog developed with [React](https://reactjs.org/), [Next](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [TypeScript](https://www.typescriptlang.org/). 
+It started as a fork of https://github.com/andreasklinger/klinger-io. Thanks to @andreasklinger and @fabian-hiller for the foundation 🤩🔥
 
 To reduce the bundle size, we replace [React](https://reactjs.org/) with [Preact](https://preactjs.com/) in the production build.
 
