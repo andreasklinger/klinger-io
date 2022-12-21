@@ -13,7 +13,7 @@ const ErrorPage: NextPage = () => (
     <p>
       The page you’re looking for doesn’t exist. Return to the{' '}
       <Link href="/">
-        <a>homepage</a>
+        homepage
       </Link>
       .
     </p>

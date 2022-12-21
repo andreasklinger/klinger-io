@@ -89,77 +89,72 @@ function MyApp({Component, pageProps}: AppProps) {
         [theme]
     );
 
-    return (
-        <>
-            <Head>
-                <meta name="theme-color" content={bgColor}/>
-                <meta name="msapplication-TileColor" content={bgColor}/>
-            </Head>
-
-            <div className="relative">
+    return <>
+        <Head>
+            <meta name="theme-color" content={bgColor}/>
+            <meta name="msapplication-TileColor" content={bgColor}/>
+        </Head>
+        <div className="relative">
+            <div
+                className="w-full h-full absolute z-[-1] top-0 left-0"
+                ref={opacityElementRef}
+            >
                 <div
-                    className="w-full h-full absolute z-[-1] top-0 left-0"
-                    ref={opacityElementRef}
-                >
+                    className="w-full h-full opacity-10 dark:opacity-[.15]"
+                    ref={gradientElementRef}
+                />
+            </div>
+            <header
+                className="w-full fixed z-20 top-0 left-0 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-blur p-4 md:p-5 lg:py-6 lg:px-10">
+                <nav className="flex justify-between">
+                    <Link
+                        href="/"
+                        className="prevent-default max-w-[45%] p-3 -m-3 text-base sm:text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
+                        Midnight Madman
+                    </Link>
                     <div
-                        className="w-full h-full opacity-10 dark:opacity-[.15]"
-                        ref={gradientElementRef}
-                    />
-                </div>
-
-                <header
-                    className="w-full fixed z-20 top-0 left-0 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-blur p-4 md:p-5 lg:py-6 lg:px-10">
-                    <nav className="flex justify-between">
-                        <Link href="/">
-                            <a className="prevent-default max-w-[45%] p-3 -m-3 text-base sm:text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
-                                Midnight Madman
-                            </a>
-                        </Link>
-
-                        <div
-                            className="flex items-center space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-10 text-gray-600 dark:text-gray-400 transition-colors">
-                            <a
-                                className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-gray-800 dark:hover:text-gray-200"
-                                href="/rss.xml"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                RSS
-                            </a>
-
-                            <button
-                                className="w-4 lg:w-5 h-4 lg:h-5 box-content p-3 -m-3 hover:text-gray-800 dark:hover:text-gray-200"
-                                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                                type="button"
-                            >
-                                <ThemeIcon/>
-                            </button>
-                        </div>
-                    </nav>
-                </header>
-
-                <main className="min-h-screen container pt-28 md:pt-36 lg:pt-44 pb-16 md:pb-24 lg:pb-32">
-                    <Component {...pageProps} />
-                </main>
-
-                <footer
-                    className="md:flex md:justify-between text-gray-500 space-y-2 md:space-y-0 px-4 pb-6 md:px-5 md:pb-4 lg:px-10 lg:pb-5">
-                    <div>&copy; Copyright {new Date().getFullYear()} Midnight Madman</div>
-                    <div className="text-sm md:text-base leading-loose">
+                        className="flex items-center space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-10 text-gray-600 dark:text-gray-400 transition-colors">
                         <a
-                            className="prevent-default space-x-1"
-                            href="https://github.com/midnight-madman/blog"
+                            className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-gray-800 dark:hover:text-gray-200"
+                            href="/rss.xml"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <GitHubIcon className="h-5 md:h-6 inline"/>{' '}
-                            <span className="underline">Source Code</span>
+                            RSS
                         </a>
+
+                        <button
+                            className="w-4 lg:w-5 h-4 lg:h-5 box-content p-3 -m-3 hover:text-gray-800 dark:hover:text-gray-200"
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            type="button"
+                        >
+                            <ThemeIcon/>
+                        </button>
                     </div>
-                </footer>
-            </div>
-        </>
-    );
+                </nav>
+            </header>
+
+            <main className="min-h-screen container pt-28 md:pt-36 lg:pt-44 pb-16 md:pb-24 lg:pb-32">
+                <Component {...pageProps} />
+            </main>
+
+            <footer
+                className="md:flex md:justify-between text-gray-500 space-y-2 md:space-y-0 px-4 pb-6 md:px-5 md:pb-4 lg:px-10 lg:pb-5">
+                <div>&copy; Copyright {new Date().getFullYear()} Midnight Madman</div>
+                <div className="text-sm md:text-base leading-loose">
+                    <a
+                        className="prevent-default space-x-1"
+                        href="https://github.com/midnight-madman/blog"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <GitHubIcon className="h-5 md:h-6 inline"/>{' '}
+                        <span className="underline">Source Code</span>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </>;
 }
 
 export default MyApp;
