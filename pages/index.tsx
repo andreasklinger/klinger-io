@@ -75,7 +75,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
         <a href="https://www.angellist.com" target="_blank" rel="noreferrer">
           AngelList
         </a>
-        , and currently I work as CTO at{' '}
+        , and CTO at{' '}
         <a href="https://www.beondeck.com">On Deck</a>.
       </p>
       <p>
