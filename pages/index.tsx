@@ -89,6 +89,10 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
         </a>
         .
       </p>
+      
+      <p>
+        For example: <a href="https://cal.com/">Cal.com</a> is my favourite portfolio company.
+      </p>
 
       <p>
         I was lucky to learn from{' '}
