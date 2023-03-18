@@ -1,4 +1,4 @@
-# Blog of Andreas Klinger
+# Blog of Lukas Bernert
 
 In this repository you will find the source code for [klinger.io](https://klinger.io/).
 
@@ -7,26 +7,6 @@ In this repository you will find the source code for [klinger.io](https://klinge
 It is a markdown based blog developed with [React](https://reactjs.org/), [Next](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [TypeScript](https://www.typescriptlang.org/). The site is statically hosted on [Firebase](https://firebase.google.com/) and uses the Realtime Database to capture and display the current views of each blog post.
 
 To reduce the bundle size, we replace [React](https://reactjs.org/) with [Preact](https://preactjs.com/) in the production build.
-
-## Getting started
-
-Step 1: Clone repository
-
-```bash
-git clone git@github.com:andreasklinger/klinger-io.git
-```
-
-Step 2: Install dependencies
-
-```bash
-npm install
-```
-
-Step 3: Start development server
-
-```bash
-npm run dev
-```
 
 ## Deployment
 

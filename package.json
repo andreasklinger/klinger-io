@@ -1,7 +1,7 @@
 {
-  "name": "klinger-io",
+  "name": "bernert-io",
   "version": "1.0.0",
-  "homepage": "https://klinger.io/",
+  "homepage": "https://bernert.io/",
   "private": true,
   "license": "MIT",
   "scripts": {

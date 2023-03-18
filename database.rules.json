@@ -1,11 +1,7 @@
 {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
   "rules": {
-    "views": {
-      "$slug": {
-        ".read": true,
-        ".write": true,
-        ".validate": "newData.isNumber() && ((!data.exists() && newData.val() === 1) || newData.val() === data.val() + 1)"
-      }
-    }
+    ".read": false,
+    ".write": false
   }
 }
