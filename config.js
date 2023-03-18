@@ -1,5 +1,5 @@
 module.exports = {
-  websiteUrl: 'bernert-io.firebaseapp.com',
+  websiteUrl: 'bernert-io.web.app',
   analyticsTrackingId: '',
   firebaseDatabaseUrl: 'https://bernert-io-default-rtdb.europe-west1.firebasedatabase.app',
   responsiveImage: {
