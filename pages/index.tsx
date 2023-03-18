@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   // Genearte RSS feed and add it to public directory
   generateRssFeed(
     {
-      title: 'Blog posts of Andreas Klinger',
+      title: 'Blog posts of Lukas Bernert',
       description:
         'Learn more about startups, remote work, funding, software and useful tools I use. In the blog posts I share my experience from the past 10+ years.',
     },
@@ -47,61 +47,23 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
   return (
     <>
       <Head
-        title="Andreas Klinger"
-        description="I am a product/eng-guy good in two things: Making people believe I am good in anything at all and making stuff worth a tweet. On this website I share notes &amp; thoughts."
+        title="Lukas Bernert"
+        description="blub"
       />
 
       <div className="flex items-center space-x-4 md:space-x-5 lg:space-x-6">
         <Image
           className="prevent-default w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 rounded-full"
-          src="/images/andreas-klinger.jpg"
-          alt="Andreas Klinger"
+          src="/images/"
+          alt="Lukas Bernert"
           sizes="(max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
         />
         <h1>Hey! ✌️</h1>
       </div>
 
-      <p className="mt-6 md:mt-8 lg:mt-10">My name is Andreas Klinger.</p>
+      <p className="mt-6 md:mt-8 lg:mt-10">My name is Lukas Bernert.</p>
       <p>
-        I was founding team &amp; CTO of{' '}
-        <a href="https://www.producthunt.com" target="_blank" rel="noreferrer">
-          Product Hunt
-        </a>
-        , VPE of{' '}
-        <a href="https://www.coinlist.co" target="_blank" rel="noreferrer">
-          CoinList
-        </a>
-        , Head of Remote at{' '}
-        <a href="https://www.angellist.com" target="_blank" rel="noreferrer">
-          AngelList
-        </a>
-        , and CTO at{' '}
-        <a href="https://www.beondeck.com">On Deck</a>.
-      </p>
-      <p>
-        I also angel invest via{' '}
-        <a
-          href="https://www.remotefirstcapital.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Remote First Capital
-        </a>
-        .
-      </p>
-
-      <p>
-        I was lucky to learn from{' '}
-        <Link href="/posts/🙏">
-          <a>a lot of people</a>
-        </Link>{' '}
-        throughout my career.
-        <br />
-        On this page I try to{' '}
-        <Link href="/posts/">
-          <a>summarize some learnings</a>
-        </Link>
-        .
+        This is my site.
       </p>
 
       <ul className="prevent-default flex space-x-8 md:space-x-9 lg:space-x-10 mt-6 md:mt-8 lg:mt-10">

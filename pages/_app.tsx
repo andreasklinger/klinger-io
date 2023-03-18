@@ -112,7 +112,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <nav className="flex justify-between">
             <Link href="/">
               <a className="prevent-default max-w-[45%] p-3 -m-3 text-base sm:text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
-                Andreas Klinger
+                Lukas Bernert
               </a>
             </Link>
 
@@ -142,7 +142,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </main>
 
         <footer className="md:flex md:justify-between text-gray-500 space-y-2 md:space-y-0 px-4 pb-6 md:px-5 md:pb-4 lg:px-10 lg:pb-5">
-          <div>&copy; Copyright {new Date().getFullYear()} Andreas Klinger</div>
+          <div>&copy; Copyright {new Date().getFullYear()} Lukas Bernert</div>
           <div className="text-sm md:text-base leading-loose">
             <a
               className="prevent-default space-x-1"
