@@ -12,10 +12,7 @@ const ErrorPage: NextPage = () => (
     <h1>404 – Page not found 🥲</h1>
     <p>
       The page you’re looking for doesn’t exist. Return to the{' '}
-      <Link href="/">
-        <a>homepage</a>
-      </Link>
-      .
+      <Link href="/">homepage</Link>.
     </p>
   </>
 );

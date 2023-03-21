@@ -108,17 +108,18 @@ function MyApp({ Component, pageProps }: AppProps) {
           />
         </div>
 
-        <header className="w-full fixed z-20 top-0 left-0 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-blur p-4 md:p-5 lg:py-6 lg:px-10">
+        <header className="fixed top-0 left-0 z-20 w-full p-4 bg-white dark:bg-black bg-opacity-60 dark:bg-opacity-60 backdrop-blur md:p-5 lg:py-6 lg:px-10">
           <nav className="flex justify-between">
-            <Link href="/">
-              <a className="prevent-default max-w-[45%] p-3 -m-3 text-base sm:text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors whitespace-nowrap overflow-hidden text-ellipsis">
-                Andreas Klinger
-              </a>
+            <Link
+              href="/"
+              className="prevent-default max-w-[45%] p-3 -m-3 text-base sm:text-lg lg:text-xl text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-100 font-semibold transition-colors whitespace-nowrap overflow-hidden text-ellipsis"
+            >
+              Andreas Klinger
             </Link>
 
-            <div className="flex items-center space-x-3 sm:space-x-6 md:space-x-8 lg:space-x-10 text-gray-600 dark:text-gray-400 transition-colors">
+            <div className="flex items-center space-x-3 text-gray-600 transition-colors sm:space-x-6 md:space-x-8 lg:space-x-10 dark:text-gray-400">
               <a
-                className="prevent-default p-3 -m-3 text-base lg:text-lg hover:text-gray-800 dark:hover:text-gray-200"
+                className="p-3 -m-3 text-base prevent-default lg:text-lg hover:text-gray-800 dark:hover:text-gray-200"
                 href="/rss.xml"
                 target="_blank"
                 rel="noreferrer"
@@ -127,7 +128,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               </a>
 
               <button
-                className="w-4 lg:w-5 h-4 lg:h-5 box-content p-3 -m-3 hover:text-gray-800 dark:hover:text-gray-200"
+                className="box-content w-4 h-4 p-3 -m-3 lg:w-5 lg:h-5 hover:text-gray-800 dark:hover:text-gray-200"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 type="button"
               >
@@ -137,25 +138,25 @@ function MyApp({ Component, pageProps }: AppProps) {
           </nav>
         </header>
 
-        <main className="min-h-screen container pt-28 md:pt-36 lg:pt-44 pb-16 md:pb-24 lg:pb-32">
+        <main className="container min-h-screen pb-16 pt-28 md:pt-36 lg:pt-44 md:pb-24 lg:pb-32">
           <Component {...pageProps} />
         </main>
 
-        <footer className="md:flex md:justify-between text-gray-500 space-y-2 md:space-y-0 px-4 pb-6 md:px-5 md:pb-4 lg:px-10 lg:pb-5">
+        <footer className="px-4 pb-6 space-y-2 text-gray-500 md:flex md:justify-between md:space-y-0 md:px-5 md:pb-4 lg:px-10 lg:pb-5">
           <div>&copy; Copyright {new Date().getFullYear()} Andreas Klinger</div>
-          <div className="text-sm md:text-base leading-loose">
+          <div className="text-sm leading-loose md:text-base">
             <a
-              className="prevent-default space-x-1"
+              className="space-x-1 prevent-default"
               href="https://github.com/andreasklinger/klinger-io"
               target="_blank"
               rel="noreferrer"
             >
-              <GitHubIcon className="h-5 md:h-6 inline" />{' '}
+              <GitHubIcon className="inline h-5 md:h-6" />{' '}
               <span className="underline">Source Code</span>
             </a>
             <span> | Developed by </span>
             <a
-              className="prevent-default underline"
+              className="underline prevent-default"
               href="https://megalink.io/fabian"
               target="_blank"
               rel="noreferrer"
