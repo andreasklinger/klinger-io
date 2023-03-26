@@ -13,25 +13,25 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "mdx-bundler": "^8.0.1",
+    "mdx-bundler": "^9.2.1",
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reading-time": "^1.5.0",
-    "swr": "^1.1.2"
+    "swr": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "^18.15.10",
-    "@types/react": "^17.0.38",
-    "autoprefixer": "^10.4.1",
+    "@types/react": "^18.0.29",
+    "autoprefixer": "^10.4.14",
     "esbuild": "^0.17.14",
-    "eslint": "^8.6.0",
-    "eslint-config-next": "^12.0.7",
-    "eslint-config-prettier": "^8.3.0",
-    "postcss": "^8.4.5",
-    "prettier": "^2.5.1",
-    "sharp": "^0.29.3",
-    "tailwindcss": "^3.0.8",
-    "typescript": "^4.5.4"
+    "eslint": "^8.36.0",
+    "eslint-config-next": "^13.2.4",
+    "eslint-config-prettier": "^8.8.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
+    "sharp": "^0.32.0",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^5.0.2"
   }
 }
