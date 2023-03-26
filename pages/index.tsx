@@ -53,7 +53,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
 
       <div className="flex items-center space-x-4 md:space-x-5 lg:space-x-6">
         <Image
-          className="prevent-default w-8 md:w-10 lg:w-12 h-8 md:h-10 lg:h-12 rounded-full"
+          className="w-8 h-8 rounded-full prevent-default md:w-10 lg:w-12 md:h-10 lg:h-12"
           src="/images/andreas-klinger.jpg"
           alt="Andreas Klinger"
           sizes="(max-width: 768px) 32px, (max-width: 1024px) 40px, 48px"
@@ -75,8 +75,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
         <a href="https://www.angellist.com" target="_blank" rel="noreferrer">
           AngelList
         </a>
-        , and CTO at{' '}
-        <a href="https://www.beondeck.com">On Deck</a>.
+        , and CTO at <a href="https://www.beondeck.com">On Deck</a>.
       </p>
       <p>
         I also angel invest via{' '}
@@ -91,20 +90,14 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
       </p>
 
       <p>
-        I was lucky to learn from{' '}
-        <Link href="/posts/🙏">
-          <a>a lot of people</a>
-        </Link>{' '}
+        I was lucky to learn from <Link href="/posts/🙏">a lot of people</Link>{' '}
         throughout my career.
         <br />
         On this page I try to{' '}
-        <Link href="/posts/">
-          <a>summarize some learnings</a>
-        </Link>
-        .
+        <Link href="/posts/">summarize some learnings</Link>.
       </p>
 
-      <ul className="prevent-default flex space-x-8 md:space-x-9 lg:space-x-10 mt-6 md:mt-8 lg:mt-10">
+      <ul className="flex mt-6 space-x-8 prevent-default md:space-x-9 lg:space-x-10 md:mt-8 lg:mt-10">
         {[
           {
             Icon: TwitterColorIcon,
@@ -121,7 +114,7 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
         ].map(({ href, Icon }) => (
           <li key={href}>
             <a
-              className="prevent-default h-8 lg:h-9 block text-black dark:text-white"
+              className="block h-8 text-black prevent-default lg:h-9 dark:text-white"
               href={href}
               target="_blank"
               rel="noreferrer"
