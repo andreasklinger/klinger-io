@@ -6,8 +6,6 @@ In this repository you will find the source code for [klinger.io](https://klinge
 
 It is a markdown based blog developed with [React](https://reactjs.org/), [Next](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [TypeScript](https://www.typescriptlang.org/). The site is statically hosted on [Firebase](https://firebase.google.com/) and uses the Realtime Database to capture and display the current views of each blog post.
 
-To reduce the bundle size, we replace [React](https://reactjs.org/) with [Preact](https://preactjs.com/) in the production build.
-
 ## Getting started
 
 Step 1: Clone repository
@@ -19,13 +17,13 @@ git clone git@github.com:andreasklinger/klinger-io.git
 Step 2: Install dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 Step 3: Start development server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## Deployment
@@ -37,13 +35,13 @@ If a circumstance requires manual deployment, perform the following steps:
 Step 1: Create production build
 
 ```bash
-npm run build
+pnpm build
 ```
 
 Step 2: Deploy via Firebase
 
 ```bash
-npm run deploy
+pnpm deploy
 ```
 
 > For this, the Firebase CLI must be installed globally (`npm install -g firebase-tools`) and it is required that you log in through it (`firebase login`). Furthermore, you need the necessary project permissions for the deployment.
