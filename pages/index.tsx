@@ -11,6 +11,31 @@ interface HomePageProps {
   posts: PostFrontMatter[];
 }
 
+const favouriteStartup = "Cal.com"
+
+// simple test function
+function it(desc: string, fn: () => void) {
+  try {
+    fn();
+    console.log('\x1b[32m%s\x1b[0m', '\u2714 ' + desc);
+  } catch (error) {
+    console.log('\n');
+    console.log('\x1b[31m%s\x1b[0m', '\u2718 ' + desc);
+    console.error(error);
+  }
+}
+
+function assert(isTrue: boolean) {
+  if (!isTrue) {
+    throw new Error();
+  }
+}
+
+// most important tests
+it('is Cal.com my favourite startup', function() {
+  assert(favouriteStartup === "Cal.com");
+});
+
 // Build time Node.js code
 export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
   // Create list with all blog post
