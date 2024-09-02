@@ -21,7 +21,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
     {
       title: 'Blog posts of Andreas Klinger',
       description:
-        'Learn more about startups, remote work, funding, software and useful tools I use. In the blog posts I share my experience from the past 10+ years.',
+        'In the blog posts I share my experience from the past 10+ years.',
     },
     posts
   );
@@ -79,12 +79,8 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
       </p>
       <p>
         I also angel invest via{' '}
-        <a
-          href="https://www.remotefirstcapital.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Remote First Capital
+        <a href="https://www.prototypecap.com" target="_blank" rel="noreferrer">
+          Prototype Capital 🦾
         </a>
         .
       </p>
