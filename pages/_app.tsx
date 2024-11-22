@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useRef, useEffect, useMemo, useState } from 'react';
+import { useRef, useEffect, useMemo, useState, useLayoutEffect } from 'react';
 import { trackAnalyticsPageview } from '../helpers/trackAnalyticsPageview';
 import { ThemeIcon, GitHubIcon } from '../icons';
 import 'tailwindcss/tailwind.css';
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events]);
 
   // Set initial theme based on user's prefers color scheme
-  useEffect(() => {
+  useLayoutEffect(() => {
     setTheme(
       window?.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   // Add or remove dark class when theme changes
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
     } else {
