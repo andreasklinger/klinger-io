@@ -69,21 +69,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(updateBackground, [router.asPath]);
   useEffect(() => window.addEventListener('resize', updateBackground), []);
 
-  // Animate background opacity with 10 FPS to reduce GPU load
-  useEffect(() => {
-    const fps = 10;
-    let opacity = 1;
-    let direction = 1;
-    setInterval(() => {
-      opacity += direction * (0.1 / fps);
-      if (opacity < 0 || opacity > 1) {
-        direction *= -1;
-      } else {
-        opacityElementRef.current!.style.opacity = opacity.toString();
-      }
-    }, 1000 / fps);
-  }, []);
-
   // Create background color depending on theme
   const bgColor = useMemo(
     () => (theme === 'light' ? '#ffffff' : '#000000'),
@@ -103,7 +88,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           ref={opacityElementRef}
         >
           <div
-            className="w-full h-full opacity-10 dark:opacity-[.15]"
+            className="w-full h-full opacity-5 dark:opacity-10"
             ref={gradientElementRef}
           />
         </div>
