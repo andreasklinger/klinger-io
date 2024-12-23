@@ -65,16 +65,16 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
       <p>
         I invest via my micro-fund{' '}
         <a href="https://www.prototypecap.com" target="_blank" rel="noreferrer">
-          Prototype Capital 🦾
+          Prototype Capital
         </a>
-        into crazy stuff globally.
+        {' '}into crazy stuff globally. 🦾
       </p>
       <p>
-        Additionally, I try to make Europe a better place for startups by making{' '}
+        Additionally, I work on{' '}
         <a href="https://www.eu-inc.org" target="_blank" rel="noreferrer">
-          EU Inc
+          🇪🇺 EU Inc
         </a>
-        happen.
+        {' '} to make Europe a better place for startups.
       </p>
 
       <p>
