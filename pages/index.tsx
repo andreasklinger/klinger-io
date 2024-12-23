@@ -63,7 +63,22 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
 
       <p className="mt-6 md:mt-8 lg:mt-10">My name is Andreas Klinger.</p>
       <p>
-        I was founding team &amp; CTO of{' '}
+        I invest via my micro-fund{' '}
+        <a href="https://www.prototypecap.com" target="_blank" rel="noreferrer">
+          Prototype Capital 🦾
+        </a>
+        into crazy stuff globally.
+      </p>
+      <p>
+        Additionally, I try to make Europe a better place for startups by making{' '}
+        <a href="https://www.eu-inc.org" target="_blank" rel="noreferrer">
+          EU Inc
+        </a>
+        happen.
+      </p>
+
+      <p>
+        Before that, I was founding team &amp; CTO of{' '}
         <a href="https://www.producthunt.com" target="_blank" rel="noreferrer">
           Product Hunt
         </a>
@@ -76,13 +91,6 @@ const HomePage: NextPage<HomePageProps> = ({ posts }) => {
           AngelList
         </a>
         , and CTO at <a href="https://www.beondeck.com">On Deck</a>.
-      </p>
-      <p>
-        I also angel invest via{' '}
-        <a href="https://www.prototypecap.com" target="_blank" rel="noreferrer">
-          Prototype Capital 🦾
-        </a>
-        .
       </p>
 
       <p>
