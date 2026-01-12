@@ -81,12 +81,12 @@ hr {
   + :is(p, blockquote, img, ul, ol, pre):not(.prevent-default) {
   @apply mt-4 md:mt-6 lg:mt-8;
 }
-:is(main, article)
+/*:is(main, article)
   > :is(ul, ol):not(.prevent-default)
   :is(li + li, li > :is(ul, ol)),
 :is(main, article) > blockquote > * + * {
   @apply mt-2 md:mt-3 lg:mt-4;
-}
+}*/
 :is(main, article) > * + hr,
 :is(main, article) > hr + *:not(h2, h3, h4) {
   @apply mt-8 md:mt-10 lg:mt-12 !important;
