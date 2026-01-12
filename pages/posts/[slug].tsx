@@ -104,7 +104,7 @@ const PostPage: NextPage<PostPageProps> = ({ post }) => {
 
       <article>
         <h1>{title}</h1>
-        <p className="text-base lg:text-lg mt-4 md:mt-6 lg:mt-8 mb-12 md:mb-20 lg:mb-24">
+        <p className="text-base lg:text-lg mt-4 md:mt-6 lg:mt-8 mb-6 md:mb-10 lg:mb-12">
           {publishedAt} · {readingTime} · {views} views
         </p>
 
